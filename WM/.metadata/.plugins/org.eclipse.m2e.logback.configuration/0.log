@@ -413,3 +413,8 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.gu
 2019-05-03 08:19:15,857 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2019-05-03 08:19:15,860 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-03 08:19:15,860 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\alediaz\Desktop\WM\wm\src\test\resources
+2019-05-03 09:51:10,013 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-03 09:52:52,048 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-03 09:53:40,467 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-03 10:58:04,626 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to build parent project for org.springframework.boot:spring-boot-starter-parent:pom:2.1.4.RELEASE
+2019-05-03 10:58:04,642 [Worker-7: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to build parent project for com.worldmusic:worldmusic:jar:0.0.1-SNAPSHOT
