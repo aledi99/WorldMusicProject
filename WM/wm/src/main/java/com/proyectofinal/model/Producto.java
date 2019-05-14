@@ -32,12 +32,6 @@ public class Producto {
 	@ManyToOne
 	private LineaPedido lineaPedido;
 
-	/**
-	 * Constructor
-	 */
-	public Producto() {
-
-	}
 
 	/**
 	 * Constructor de la clase Producto

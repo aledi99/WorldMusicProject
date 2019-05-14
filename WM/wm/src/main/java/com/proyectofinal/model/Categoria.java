@@ -27,13 +27,6 @@ public class Categoria {
 										// Producto mediante @OneToMany
 
 	/**
-	 * Constructor vacío de la clase Categoría
-	 */
-	public Categoria() {
-
-	}
-
-	/**
 	 * Constructor con dos parámetros de la clase Categoría
 	 * 
 	 * @param nombreC
