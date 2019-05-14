@@ -25,3 +25,36 @@ body {
     margin-right: auto;
     margin-left: auto;
   }
+
+  .input-group-addon {
+    background-color: darkred;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 4px;
+  }
+
+  form {
+    margin-left: 600px;
+  }
+
+  div.col-md-4 div.checkbox {
+    display: inline-block;
+    width: 100px;
+    
+  } 
+  
+  .form-group:last-child {
+    margin-left: 450px;
+  }
+
+  legend {
+    margin-left:-600px;
+
+    font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 2rem;
+  
+  
+  }

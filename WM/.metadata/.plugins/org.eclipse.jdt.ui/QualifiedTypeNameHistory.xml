@@ -2,11 +2,25 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.CarritoRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.Carrito"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.CategoriaRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.Categoria"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.ConciertoRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.Concierto"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.LineaPedidoRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.LineaPedido"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.ProductoRepository"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.Producto"/>
+<fullyQualifiedTypeName name="com.proyectofinal.repository.UsuarioRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.proyectofinal.model.Usuario"/>
 </qualifiedTypeNameHistroy>
