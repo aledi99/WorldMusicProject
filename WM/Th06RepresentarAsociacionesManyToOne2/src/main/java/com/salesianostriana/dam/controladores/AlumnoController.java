@@ -20,59 +20,59 @@ import com.salesianostriana.dam.servicios.CursoServicio;
  */
 @Controller
 public class AlumnoController {
-	
+
 	private AlumnoServicio alumnoServicio;
 	private CursoServicio cursoServicio;
-	
-	
+
 	public AlumnoController(AlumnoServicio servicio, CursoServicio cursoServicio) {
 		this.alumnoServicio = servicio;
-		this.cursoServicio=cursoServicio;
+		this.cursoServicio = cursoServicio;
 	}
-	
+
 	/**
 	 * Método que gestiona la petición "índice" o listado de alumnos
 	 * 
 	 */
-	@GetMapping({"/", "/list"})
+	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
 		model.addAttribute("lista", alumnoServicio.findAll());
 		return "index";
 	}
-	
+
 	/**
-	 * Método que atiende la petición de mostrar formulario para agregar un nuevo alumno
+	 * Método que atiende la petición de mostrar formulario para agregar un nuevo
+	 * alumno
 	 */
 	@GetMapping("/nuevo")
 	public String mostrarFormulario(Model model) {
 		model.addAttribute("cursos", cursoServicio.findAll());
 		model.addAttribute("alumno", new Alumno());
-		
+
 		return "formulario";
 	}
-	
+
 	/**
 	 * Método que procesa la respuesta del formulario para agregar un nuevo alumno
 	 */
 	@PostMapping("/nuevo/submit")
 	public String procesarFormulario(@ModelAttribute("alumno") Alumno a, Model model) {
 		alumnoServicio.add(a);
-		
+
 		model.addAttribute("cursos", cursoServicio.findAll());
 		return "redirect:/";
 	}
-	
-	
+
 	/**
-	 * Método que atiende la petición de mostrar el formulario de edición de un alumno
+	 * Método que atiende la petición de mostrar el formulario de edición de un
+	 * alumno
 	 * 
-	 * @param id del alumno a editar
+	 * @param id    del alumno a editar
 	 * @param model
 	 * @return
 	 */
 	@GetMapping("/editar/{id}")
 	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
-		
+
 		Alumno aEditar = alumnoServicio.findById(id);
 		model.addAttribute("cursos", cursoServicio.findAll());
 		if (aEditar != null) {
@@ -83,10 +83,9 @@ public class AlumnoController {
 			// Redirigimos hacia el listado.
 			return "redirect:/";
 		}
-		
-		
+
 	}
-	
+
 	/**
 	 * Método que procesa la respuesta del formulario al editar
 	 */
@@ -95,9 +94,10 @@ public class AlumnoController {
 		alumnoServicio.edit(a);
 		return "redirect:/";
 	}
-	
+
 	/**
 	 * Método que borra un alumno por su Id
+	 * 
 	 * @param id
 	 * @return
 	 */

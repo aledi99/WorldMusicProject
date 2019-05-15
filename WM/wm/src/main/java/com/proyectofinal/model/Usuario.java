@@ -3,6 +3,10 @@ package com.proyectofinal.model;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +20,9 @@ public class Usuario {
 	private LocalDate fechaNac;
 	private int codPostal;
 	private boolean usuarioAdmin;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idUsuario;
 
 	public Usuario(String nombre, String apellidos, String nick, String correo, String direccion, String provincia, String contrasenya,

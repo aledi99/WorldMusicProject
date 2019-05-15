@@ -2831,3 +2831,18 @@ Contains: Missing org.springframework.boot:spring-boot-starter-thymeleaf:jar:jav
 !MESSAGE Could not resolve artifact org.springframework.boot:spring-boot-starter-thymeleaf:jar:javadoc:2.1.4.RELEASE
 !SUBENTRY 2 org.eclipse.m2e.core 4 -1 2019-05-14 11:50:32.241
 !MESSAGE Missing org.springframework.boot:spring-boot-starter-thymeleaf:jar:javadoc:2.1.4.RELEASE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 12:54:00.629
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MXoGzywn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 12:54:00.651
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.MXoGzywn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 12:54:00.699
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 12:54:00.790
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MXoGzywn => OK
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-05-14 12:54:02.471
+!MESSAGE The workspace will exit with unsaved changes in this session.

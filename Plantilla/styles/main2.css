@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  
+  background: url(../img/fondo.jpg) no-repeat center center;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -47,7 +47,7 @@ body {
   height: 100%;
   /* For at least Firefox */
   min-height: 100%;
-  background: rgba(244, 222, 205);
+  background: rgba(255, 242, 173, 0.2);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
@@ -62,12 +62,16 @@ body {
 }
 
 .contenido {
-  width: 1800px;
+  
   margin: 0 auto;
 }
 
 .contenido .card {
-  height: 500px;
+
+}
+
+.carousel-slide {
+  margin: 0 auto;
 }
 
 /* Padding for spacing */
@@ -92,6 +96,23 @@ body {
 .nav-masthead {
   text-align: center;
   display: block;
+  
+}
+
+.nav-masthead .nav-link {
+  transition: all .55s;
+}
+
+.nav-masthead .nav-link:hover {
+
+  color: rgb(255, 0, 0);
+}
+
+.carousel-inner img{
+  width: auto;
+  height: 405px;
+  max-height: 705px;
+  border-radius: 10px;
 }
 
 .nav-masthead2 {
@@ -102,13 +123,24 @@ body {
 }
 
 .nav-masthead2 .nav-link {
-  margin-left: 75px;
+  margin-left: 55px;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding-bottom: 10px;
+  padding: 10px;
+  letter-spacing: 2px;
+  transition: all .55s;
   
 }  
 
 .nav-masthead2 .nav-link:hover {
-  background-color: white;
-  color: midnightblue;
+  background-color: rgba(255, 0, 0, 0.425);
+  color: rgb(253, 253, 253);
+    letter-spacing: 15px;
+    opacity: 2;
   
 }  
 
@@ -208,6 +240,7 @@ body {
     background-color: midnightblue;
     border-style: solid;
   }
+
   .mastfoot {
     position: fixed;
     bottom: 0;

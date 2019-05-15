@@ -23,4 +23,6 @@
 <fullyQualifiedTypeName name="com.proyectofinal.repository.UsuarioRepository"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Usuario"/>
+<fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 </qualifiedTypeNameHistroy>
