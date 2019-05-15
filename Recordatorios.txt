@@ -1,0 +1,1 @@
+mast-head y carousel-contain tenian de background-color: midnight;

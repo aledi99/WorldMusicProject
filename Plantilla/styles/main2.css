@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  background: url(../img/fondo.jpg) no-repeat center center;
+  background: url(../img/fondo.png) no-repeat center center;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -47,7 +47,7 @@ body {
   height: 100%;
   /* For at least Firefox */
   min-height: 100%;
-  background: rgba(255, 242, 173, 0.2);
+  background: rgba(0, 0, 0, 0.336);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
@@ -67,11 +67,55 @@ body {
 }
 
 .contenido .card {
-
+  margin: 0 auto;
 }
 
 .carousel-slide {
   margin: 0 auto;
+}
+
+.carousel-caption {
+  margin-bottom: -50px;
+  margin-left: 975px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(25, 25, 112, 0.192);
+  display: block;
+  transition: all .25s; 
+  
+}
+
+.carousel-caption p {
+  display: none;
+}
+
+.carousel-caption:hover p {
+  display: block;
+  transition: all .55s;
+}
+
+.presentacion {
+  letter-spacing: 10px;
+  margin-bottom: 50px;
+}
+
+.carousel-caption h3 {
+  background-color: rgba(255, 0, 0, 0.466);
+  border-radius: 2px;
+  text-transform: uppercase;
+  transition: all .25s; 
+  font-size: 25px;
+}
+
+.carousel-caption:hover {
+  background-color: rgba(25, 25, 112, 0.863);
+  border-style: solid;
+  border-color: red;
+}
+
+.carousel-caption h3:hover {
+
+  background-color:  rgba(255, 0, 0, 0.863);
 }
 
 /* Padding for spacing */
@@ -100,18 +144,23 @@ body {
 }
 
 .nav-masthead .nav-link {
-  transition: all .55s;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 20px;
+  transition: all .35s;
 }
 
 .nav-masthead .nav-link:hover {
-
+  border-style: solid;
+  border-radius: 20px;
+  border-color: rgb(255, 0, 0);
   color: rgb(255, 0, 0);
 }
 
 .carousel-inner img{
   width: auto;
-  height: 405px;
-  max-height: 705px;
+  height: 505px;
+  max-height: 1005px;
   border-radius: 10px;
 }
 
@@ -143,6 +192,14 @@ body {
     opacity: 2;
   
 }  
+
+.nav-masthead2 .nav-link:active {
+  background-color: rgba(255, 0, 0, 0.425);
+  color: rgb(253, 253, 253);
+    letter-spacing: 15px;
+    opacity: 2;
+
+}
 
 .nav-masthead .nav-link {
   display: inline-block;
@@ -237,13 +294,13 @@ body {
   .masthead {
     position: fixed;
     top: 0;
-    background-color: midnightblue;
+    background-color: rgb(9, 0, 88);
     border-style: solid;
   }
 
   .mastfoot {
     position: fixed;
-    bottom: 0;
+    padding-top:5px;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -257,6 +314,8 @@ body {
     /* Must be percentage or pixels for horizontal alignment */
   }
 }
+
+
 
 @media (min-width: 992px) {
   .masthead,
