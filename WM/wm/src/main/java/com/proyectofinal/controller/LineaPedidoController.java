@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.proyectofinal.model.LineaPedido;
+import com.proyectofinal.model.Usuario;
 import com.proyectofinal.service.LineaPedidoServicio;
 
 @Controller
@@ -21,6 +23,12 @@ public class LineaPedidoController {
 	public String listarTodos(Model model) {
 		model.addAttribute("listaLineaPedido", lineaPedidoService.findAll());
 		return "index";
+	}
+	
+	@GetMapping("/nuevo")
+	public String mostrarFormulario(Model model) {
+		model.addAttribute("lineaPedido", new LineaPedido());
+		return "formulario";
 	}
 
 }
