@@ -25,4 +25,14 @@
 <fullyQualifiedTypeName name="com.proyectofinal.model.Usuario"/>
 <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.CarritoServicio"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.CategoriaServicio"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.ConciertoServicio"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.LineaPedidoServicio"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.ProductoServicio"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="com.proyectofinal.service.UsuarioServicio"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

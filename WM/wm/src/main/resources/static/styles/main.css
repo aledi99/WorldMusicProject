@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  background: url(../img/fondo.png) no-repeat center center;
+  background: url(../img/believer.png) no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -47,7 +47,7 @@ body {
   height: 100%;
   /* For at least Firefox */
   min-height: 100%;
-  background: rgba(0, 0, 0, 0.336);
+  background: rgba(48, 53, 70, 0.5);
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
 }
 
@@ -61,70 +61,6 @@ body {
   margin-left: auto;
 }
 
-
-.contenido {
-  
-  margin: 0 auto;
-}
-
-.contenido .card {
-  margin: 0 auto;
-}
-
-.carousel-slide {
-  margin: 0 auto;
-}
-
-.carousel-caption {
-  margin-bottom: -50px;
-  margin-left: 975px;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(25, 25, 112, 0);
-  display: block;
-  transition: all .25s; 
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 10px;
-  
-}
-
-.carousel-caption p {
-  display: none;
-  transition: all .25s; 
-}
-
-.carousel-caption:hover p {
-  display: block;
-  transition: all .55s;
-}
-
-.presentacion {
-  letter-spacing: 10px;
-  margin-bottom: 50px;
-}
-
-.carousel-caption h3 {
-  background-color: rgba(255, 0, 0, 0.466);
-  border-radius: 2px;
-  text-transform: uppercase;
-  transition: all .25s; 
-  font-size: 25px;
-}
-
-.carousel-caption:hover {
-  background-color: rgba(25, 25, 112, 0.863);
-  border-style: solid;
-  border-color: red;
-  border-radius: 10px;
-  transition: all .25s; 
-}
-
-.carousel-caption h3:hover {
-
-  background-color:  rgba(255, 0, 0, 0.863);
-}
-
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -134,8 +70,8 @@ body {
  * Header
  */
 .masthead-brand {
+  margin-top: 10px;
   margin-bottom: 10px;
-  
 }
 
 
@@ -147,66 +83,6 @@ body {
 .nav-masthead {
   text-align: center;
   display: block;
-  
-}
-
-.nav-masthead .nav-link {
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 20px;
-  transition: all .35s;
-}
-
-.nav-masthead .nav-link:hover {
-  background-color: rgb(255, 0, 0, 0.466);
-  border-style: solid;
-  border-radius: 20px;
-  border-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-}
-
-.carousel-inner img{
-  width: auto;
-  height: 505px;
-  max-height: 1005px;
-  border-radius: 10px;
-}
-
-.nav-masthead2 {
-  text-align: center;
-  float: left;
-  text-transform: uppercase;
-  margin-left: 200px;
-}
-
-.nav-masthead2 .nav-link {
-  margin-left: 55px;
-  display: block;
-  font-size: 15px;
-  text-decoration: none;
-  border-top: 1px solid rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
-  padding-bottom: 10px;
-  padding: 10px;
-  letter-spacing: 2px;
-  transition: all .55s;
-  
-}  
-
-.nav-masthead2 .nav-link:hover {
-  background-color: rgba(255, 0, 0, 0.425);
-  color: rgb(253, 253, 253);
-    letter-spacing: 15px;
-    opacity: 2;
-  
-}  
-
-.nav-masthead2 .nav-link:active {
-  background-color: rgba(255, 0, 0, 0.425);
-  color: rgb(253, 253, 253);
-    letter-spacing: 15px;
-    opacity: 2;
-
 }
 
 .nav-masthead .nav-link {
@@ -216,7 +92,6 @@ body {
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
-    
   }
   .nav-masthead {
     float: right;
@@ -297,17 +172,15 @@ body {
 /*
  * Affix and center
  */
-
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
     top: 0;
-    height: 
   }
-
   .mastfoot {
     position: fixed;
-    padding-top:5px;
+    bottom: 0;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -321,8 +194,6 @@ body {
     /* Must be percentage or pixels for horizontal alignment */
   }
 }
-
-
 
 @media (min-width: 992px) {
   .masthead,
