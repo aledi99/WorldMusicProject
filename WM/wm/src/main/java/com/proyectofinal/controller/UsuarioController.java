@@ -1,17 +1,16 @@
 package com.proyectofinal.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.proyectofinal.model.Usuario;
+import com.proyectofinal.model.UsuarioModel;
 import com.proyectofinal.service.UsuarioServicio;
 
 @Controller
 public class UsuarioController {
 
-	@Autowired
+	
 	private UsuarioServicio usuarioService;
 
 	public UsuarioController(UsuarioServicio servicio) {
@@ -26,7 +25,7 @@ public class UsuarioController {
 	
 	@GetMapping("/nuevoUsuario")
 	public String mostrarFormulario(Model model) {
-		model.addAttribute("alumno", new Usuario());
+		model.addAttribute("alumno", new UsuarioModel());
 		return "Formulario";
 	}
 

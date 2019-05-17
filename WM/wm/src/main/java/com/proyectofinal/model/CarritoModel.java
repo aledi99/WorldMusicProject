@@ -7,33 +7,27 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-import org.springframework.data.annotation.Id;
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Carrito {
+public class CarritoModel {
 
-	// Duda Composición
-	@OneToMany
-	private List<LineaPedido> lineaPedido;
-
-	private LocalDate fechaCompra;
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idCompra;
 
-	public Carrito(List<LineaPedido> lineaPedido, LocalDate fechaCompra, long idCompra) {
-		super();
-		lineaPedido = new ArrayList<>();
-		this.fechaCompra = fechaCompra;
-		this.idCompra = idCompra;
-	}
+	private LocalDate fechaCompra;
 
+	@OneToMany
+	private List<LineaPedidoModel> lineaPedido = new ArrayList<>();
+	
+	
 }

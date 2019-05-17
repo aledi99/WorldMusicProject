@@ -1,18 +1,16 @@
 package com.proyectofinal.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.proyectofinal.model.Producto;
-import com.proyectofinal.model.Usuario;
+import com.proyectofinal.model.ProductoModel;
 import com.proyectofinal.service.ProductoServicio;
 
 @Controller
 public class ProductoController {
 
-	@Autowired
+	
 	private ProductoServicio productoService;
 
 	public ProductoController(ProductoServicio servicio) {
@@ -25,9 +23,9 @@ public class ProductoController {
 		return "index";
 	}
 	
-	@GetMapping("/nuevo")
+	@GetMapping("/nuevoProducto")
 	public String mostrarFormulario(Model model) {
-		model.addAttribute("producto", new Producto());
+		model.addAttribute("producto", new ProductoModel());
 		return "formulario";
 	}
 

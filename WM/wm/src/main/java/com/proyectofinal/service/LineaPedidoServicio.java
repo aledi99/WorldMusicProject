@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.proyectofinal.model.Concierto;
-import com.proyectofinal.model.LineaPedido;
-import com.proyectofinal.repository.ConciertoRepository;
+import com.proyectofinal.model.LineaPedidoModel;
 import com.proyectofinal.repository.LineaPedidoRepository;
 
 @Service
@@ -18,23 +16,23 @@ public class LineaPedidoServicio {
 		this.lineaPedidoRepository = repositorio;
 	}
 
-	public LineaPedido add(LineaPedido c) {
+	public LineaPedidoModel add(LineaPedidoModel c) {
 		return lineaPedidoRepository.save(c);
 	}
 
-	public LineaPedido edit(LineaPedido c) {
+	public LineaPedidoModel edit(LineaPedidoModel c) {
 		return lineaPedidoRepository.save(c);
 	}
 
-	public void delete(LineaPedido c) {
+	public void delete(LineaPedidoModel c) {
 		lineaPedidoRepository.delete(c);
 	}
 
-	public List<LineaPedido> findAll() {
+	public List<LineaPedidoModel> findAll() {
 		return lineaPedidoRepository.findAll();
 	}
 
-	public LineaPedido findById(long id) {
+	public LineaPedidoModel findById(long id) {
 		return lineaPedidoRepository.findById(id).orElse(null);
 
 	}

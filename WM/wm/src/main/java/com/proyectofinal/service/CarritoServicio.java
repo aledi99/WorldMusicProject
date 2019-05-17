@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.proyectofinal.model.Carrito;
+import com.proyectofinal.model.CarritoModel;
 import com.proyectofinal.repository.CarritoRepository;
 
 @Service
@@ -16,23 +16,23 @@ public class CarritoServicio {
 		this.carritoRepository = repositorio;
 	}
 
-	public Carrito add(Carrito c) {
+	public CarritoModel add(CarritoModel c) {
 		return carritoRepository.save(c);
 	}
 
-	public Carrito edit(Carrito c) {
+	public CarritoModel edit(CarritoModel c) {
 		return carritoRepository.save(c);
 	}
 
-	public void delete(Carrito c) {
+	public void delete(CarritoModel c) {
 		carritoRepository.delete(c);
 	}
 
-	public List<Carrito> findAll() {
+	public List<CarritoModel> findAll() {
 		return carritoRepository.findAll();
 	}
 
-	public Carrito findById(long id) {
+	public CarritoModel findById(long id) {
 		return carritoRepository.findById(id).orElse(null);
 	}
 

@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.proyectofinal.model.Producto;
-import com.proyectofinal.model.Usuario;
-import com.proyectofinal.repository.ProductoRepository;
+import com.proyectofinal.model.UsuarioModel;
 import com.proyectofinal.repository.UsuarioRepository;
 
 @Service
@@ -18,23 +16,23 @@ public class UsuarioServicio {
 		this.usuarioRepository = repositorio;
 	}
 
-	public Usuario add(Usuario c) {
+	public UsuarioModel add(UsuarioModel c) {
 		return usuarioRepository.save(c);
 	}
 
-	public Usuario edit(Usuario c) {
+	public UsuarioModel edit(UsuarioModel c) {
 		return usuarioRepository.save(c);
 	}
 
-	public void delete(Usuario c) {
+	public void delete(UsuarioModel c) {
 		usuarioRepository.delete(c);
 	}
 
-	public List<Usuario> findAll() {
+	public List<UsuarioModel> findAll() {
 		return usuarioRepository.findAll();
 	}
 
-	public Usuario findById(long id) {
+	public UsuarioModel findById(long id) {
 		return usuarioRepository.findById(id).orElse(null);
 
 	}

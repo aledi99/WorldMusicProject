@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.proyectofinal.model.Categoria;
-import com.proyectofinal.model.Concierto;
-import com.proyectofinal.repository.CategoriaRepository;
+import com.proyectofinal.model.ConciertoModel;
 import com.proyectofinal.repository.ConciertoRepository;
 
 @Service
@@ -20,23 +18,23 @@ private ConciertoRepository conciertoRepository;
 	}
 	
 	
-	public Concierto add(Concierto c) {
+	public ConciertoModel add(ConciertoModel c) {
 		return conciertoRepository.save(c);
 	}
 
-	public Concierto edit(Concierto c) {
+	public ConciertoModel edit(ConciertoModel c) {
 		return conciertoRepository.save(c);
 	}
 
-	public void delete(Concierto c) {
+	public void delete(ConciertoModel c) {
 		conciertoRepository.delete(c);
 	}
 
-	public List<Concierto> findAll() {
+	public List<ConciertoModel> findAll() {
 		return conciertoRepository.findAll();
 	}
 
-	public Concierto findById(long id) {
+	public ConciertoModel findById(long id) {
 		return conciertoRepository.findById(id).orElse(null);
 
 }
