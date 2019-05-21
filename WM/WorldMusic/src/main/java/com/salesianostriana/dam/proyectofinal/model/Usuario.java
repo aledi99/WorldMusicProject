@@ -23,7 +23,7 @@ public class Usuario {
 
 	private String nombre, apellidos, nick, correo, direccion, provincia, contrasenya;
 	private LocalDate fechaNac;
-	private int codPostal;
+	private int codPostal, numDireccion;
 	private boolean usuarioAdmin;
 
 }

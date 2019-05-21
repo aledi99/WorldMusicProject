@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Con fragments</title>
+</head>
+<body>
+
+<!-- Ejemplo basado en el tutorial de Thymeleaf usingthymeleaf, apartado 8 Template Layout (Pg 44 y siguientes). 
+En dicho apartado se explica la sintaxis de los fragments con más profundidad 
+En la plataforma se puede ver un enlace donde se puede ver cómo usar fragments para
+fragmentos con parámteros, con condicionales para cuándo incluir o no fragments, 
+layouts flexibles, etc.
+La diferencia entre insert y replace es sencilla: insert pinta el fragmento indicado
+en la etiqueta 
+-->
+ 
+ 	<p> Usando insert </p>
+ 
+ 
+ 	<div th:insert="~{footerconinsert :: copy}"></div>
+ 
+ 	<p> Y otro más sin necesidad de usar la ~ (es opcional)</p>
+ 
+  	<div th:insert="footerconinsert :: copy"></div>
+  	    <p>Esta tiene footer usando fragments</p>
+    
+<!-- La siguiente cambia por un footer -->
+ 	<div th:replace="footer.html :: footer"></div>
+  
+</body>
+</html>

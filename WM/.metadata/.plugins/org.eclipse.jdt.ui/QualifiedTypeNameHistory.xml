@@ -23,8 +23,6 @@
 <fullyQualifiedTypeName name="com.proyectofinal.service.ProductoServicio"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="com.proyectofinal.service.UsuarioServicio"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Usuario"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Producto"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.LineaPedido"/>
@@ -46,5 +44,10 @@
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ProductoRepository"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Producto"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.UsuarioRepository"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Usuario"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.service.UsuarioService"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 </qualifiedTypeNameHistroy>
