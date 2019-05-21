@@ -1,5 +1,0 @@
-package com.proyectofinal.repository;
-
-public interface ConciertoRepository {
-
-}

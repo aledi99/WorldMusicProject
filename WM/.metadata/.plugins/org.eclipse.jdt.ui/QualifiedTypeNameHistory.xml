@@ -7,10 +7,8 @@
 <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
-<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
 <fullyQualifiedTypeName name="com.proyectofinal.repository.CarritoRepository"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Carrito"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.proyectofinal.repository.CategoriaRepository"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Categoria"/>
 <fullyQualifiedTypeName name="com.proyectofinal.repository.ConciertoRepository"/>
@@ -18,7 +16,6 @@
 <fullyQualifiedTypeName name="com.proyectofinal.repository.LineaPedidoRepository"/>
 <fullyQualifiedTypeName name="com.proyectofinal.repository.ProductoRepository"/>
 <fullyQualifiedTypeName name="com.proyectofinal.repository.UsuarioRepository"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="com.proyectofinal.service.CarritoServicio"/>
 <fullyQualifiedTypeName name="com.proyectofinal.service.CategoriaServicio"/>
 <fullyQualifiedTypeName name="com.proyectofinal.service.ConciertoServicio"/>
@@ -26,7 +23,6 @@
 <fullyQualifiedTypeName name="com.proyectofinal.service.ProductoServicio"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="com.proyectofinal.service.UsuarioServicio"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="com.proyectofinal.model.Usuario"/>
@@ -35,4 +31,20 @@
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.CarritoRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Carrito"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Categoria"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.CategoriaRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Concierto"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ConciertoRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.LineaPedidoRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.LineaPedido"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ProductoRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Producto"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.UsuarioRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Usuario"/>
 </qualifiedTypeNameHistroy>
