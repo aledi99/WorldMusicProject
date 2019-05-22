@@ -29,9 +29,7 @@
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.CarritoRepository"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Carrito"/>
@@ -41,13 +39,17 @@
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ConciertoRepository"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.LineaPedidoRepository"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.LineaPedido"/>
-<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ProductoRepository"/>
-<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Producto"/>
-<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.UsuarioRepository"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Usuario"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.service.UsuarioService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.UsuarioRepository"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.service.ProductoService"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.repository.ProductoRepository"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="com.salesianostriana.dam.proyectofinal.model.Producto"/>
 </qualifiedTypeNameHistroy>
