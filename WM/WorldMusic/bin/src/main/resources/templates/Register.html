@@ -1,0 +1,238 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Formulario</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/form3.css" th:href="@{/css/form3.css}">
+  
+  </head>
+  <body>
+        <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+      <div class="cover-container">
+    
+        <div class="container">
+          <form class="form-horizontal" method="POST" action="#" th:action="@{/newUsuario/submit}" th:object="${usuario}" role="form">
+              <h2 class="titulo">Registration</h2>
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="nombre">Nombre</label>  
+                <div class="col-md-9">
+                <input id="nombre" name="nombre" type="text" th:field="*{nombre}" placeholder="Introduzca tu nombre" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="apellidos">Apellidos</label>  
+                <div class="col-md-9">
+                <input id="apellidos" name="apellidos" type="text" th:field="*{apellidos}" placeholder="Introduce tus apellidos" class="form-control input-md" required="">
+                <span class="help-block">(Separados por espacios)</span>  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="nick">Nombre de usuario</label>  
+                <div class="col-md-9">
+                <input id="nick" name="nick" type="text" th:field="*{nick}" placeholder="Vamos, ¡cúrratelo!" class="form-control input-md" required="">
+                <span class="help-block">(Debe de contener al menos 8 caracteres)</span>  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="correo">Correo electrónico</label>  
+                <div class="col-md-9">
+                <input id="correo" name="correo" type="text" th:field="*{correo}" placeholder="La dirección con @" class="form-control input-md" required="">
+                <span class="help-block">(Ej: usuario@usuario.com)</span>  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="repCorreo">Repetir correo electrónico</label>  
+                <div class="col-md-9">
+                <input id="repCorreo" name="repCorreo" type="text" placeholder="¡Igualito que el de arriba!" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="contrasenya">Contraseña</label>
+                <div class="col-md-9">
+                  <input id="contrasenya" name="contrasenya" type="password" th:field="*{contrasenya}" placeholder="Será un secreto ;P" class="form-control input-md" required="">
+                  <span class="help-block">(Debe contener al menos 6 caracteres: uno en mayúsculas y un número)</span>
+                </div>
+              </div>
+              
+              <!-- Password input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="repContrasenya">Repetir contraseña</label>
+                <div class="col-md-9">
+                  <input id="repContrasenya" name="repContrasenya" type="password" placeholder="¡Hermanas gemelas!" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="fechaNac">Fecha de nacimiento</label>  
+                <div class="col-md-9">
+                <input id="fechaNac" name="fechaNac" type="date" th:field="*{fechaNac}" placeholder="" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Prepended text-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="calle">Dirección</label>
+                <div class="col-md-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">C/</span>
+                    <input id="calle" name="calle" class="form-control" placeholder="La calle en la que vives" type="text" th:field="*{direccion}" required="">
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <!-- Prepended text-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="numero"></label>
+                <div class="col-md-9">
+                  <div class="input-group">
+                    <span class="input-group-addon">N/</span>
+                    <input id="numero" name="numero" class="form-control" placeholder="El número en el que resides" type="text" th:field="*{numDireccion}" required="">
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="codPostal">Cógido postal</label>  
+                <div class="col-md-9">
+                <input id="codPostal" name="codPostal" type="text" th:field="*{codPostal}" placeholder="5 caracteres numéricos" class="form-control input-md" required="">
+                <span class="help-block">(Ej: 41909)</span>  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="provincia">Provincia</label>  
+                <div class="col-md-9">
+                <input id="provincia" name="provincia" type="text" th:field="*{provincia}" placeholder="Yo soy de Sevilla, ¡miarma!" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="genre">Género</label>
+                <div class="col-md-9">
+                  <select id="genre" name="genre" class="form-control">
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">Otro</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Multiple Checkboxes -->
+              <div class="form-group">
+                <label class="col-md-9 control-label" for="generos">Mis géneros musicales favoritos son:</label>
+                <div class="col-md-9">
+                <div class="checkbox">
+                  <label for="generos-0">
+                    <input type="checkbox" name="generos" id="generos-0" value="1">
+                    Blues
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-1">
+                    <input type="checkbox" name="generos" id="generos-1" value="2">
+                    Clásica
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-2">
+                    <input type="checkbox" name="generos" id="generos-2" value="3">
+                    Country
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-3">
+                    <input type="checkbox" name="generos" id="generos-3" value="4">
+                    Indie
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-4">
+                    <input type="checkbox" name="generos" id="generos-4" value="5">
+                    Jazz
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-5">
+                    <input type="checkbox" name="generos" id="generos-5" value="6">
+                    Pop
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-6">
+                    <input type="checkbox" name="generos" id="generos-6" value="7">
+                    Pop-Rock
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-7">
+                    <input type="checkbox" name="generos" id="generos-7" value="8">
+                    Rap
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-8">
+                    <input type="checkbox" name="generos" id="generos-8" value="9">
+                    Reggaetón
+                  </label>
+                  </div>
+                <div class="checkbox">
+                  <label for="generos-9">
+                    <input type="checkbox" name="generos" id="generos-9" value="10">
+                    Reggae
+                  </label>
+                  </div>
+                </div>
+                  
+                 
+          
+              </div>
+      
+               <!-- Button -->
+               <div class="form-group">
+                <label class="col-md-4 control-label" for="singlebutton"></label>
+                <div class="col-md-4">
+                  <button id="singlebutton" name="singlebutton" class="btn btn-primary">Registro</button>
+                </div>
+              </div>
+          </form> <!-- /form -->
+      </div>
+
+        </div>
+        </div>
+        </div>
+        
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

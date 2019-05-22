@@ -7,5 +7,7 @@ import com.salesianostriana.dam.proyectofinal.model.Usuario;
 
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+	
+	Usuario findFirstByEmail(String email);
 
 }

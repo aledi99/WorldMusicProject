@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio</title>
+<title>Coming Soon Bootstrap 4 Template Demo</title>
 <meta name="description"
 	content="Demo of A Free Coming Soon Bootstrap 4 Template by TemplateFlip.com." />
 <link
@@ -13,61 +13,23 @@
 <link
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="../static/styles/main2.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" th:href="@{/css/min.css}"
+	rel="stylesheet">
+<link href="styles/main2.css" th:href="@{/styles/main2.css}"
+	rel="stylesheet">
 </head>
 <body id="top">
 	<div class="site-wrapper col-md-14">
 		<div class="site-wrapper-inner">
 			<div class="cover-container">
-				<div class="masthead clearfix">
-					<div class="inner">
-						<h3 class="masthead-brand">
-							<a class="nav-link-social" href="#">World Music<img
-								src="../static/img/logo.png" width="40" height="40">
-						</h3>
-						<nav class="nav nav-masthead2 font-weight-bold">
-							<a class="nav-link nav-social" href="#">Productos</a> <a
-								class="nav-link nav-social" href="#">Conciertos</a> <a
-								class="nav-link nav-social" href="#">Ajustes</a>
-						</nav>
-						<nav class="nav nav-masthead">
-							<a class="nav-link nav-social" href="#">¡Inicia sesión!</a> <a
-								class="nav-link nav-social" href="#">¡Únete a nuestro mundo!</a>
-						</nav>
-					</div>
-				</div>
+				<div th:insert="navegador :: navegador"></div>
 				<br>
-
-
-				<table>
-					<thead>
-						<tr>
-							<th>Nombre</th>
-							<th>Descripción</th>
-							<th>Fecha de publicación</th>
-							<th>PvP</th>
-							<th>En Stock</th>
-
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="ProductoModel : ${listaProductos}">
-
-							<td th:text="${ProductoModel.nombre}"></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-
-						</tr>
-					</tbody>
-				</table>
-
 
 
 
 				<div class="col-md-10 contenido"></div>
+
+
 			</div>
 
 
@@ -102,7 +64,7 @@
 							<form>
 								<div class="form-group">
 									<p>Nuestro correo:
-									<h3 target=""_blank">alediazuni@gmail.com</h3>
+									<h3 target="_blank">alediazuni@gmail.com</h3>
 
 								</div>
 							</form>

@@ -1,0 +1,66 @@
+body {
+    background: url(../img/believer.png) no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 200%;
+    /* For at least Firefox */
+    min-height: 200%;
+    background: rgba(48, 53, 70, 0.5);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  .site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+  }
+  
+  .cover-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .input-group-addon {
+    background-color: darkred;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 4px;
+  }
+
+  form {
+    margin-left: 750px;
+    
+  }
+
+  .color {
+    background-color: blue;
+  }
+
+  div.col-md-4 div.checkbox {
+    display: inline-block;
+    width: 150px;
+    padding-left: 50px;
+  } 
+  
+  .form-group:last-child {
+    margin-left: 450px;
+  }
+
+  legend {
+    padding-left: 64px;
+    margin-bottom: 50px;
+
+    font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 2rem;
+  
+  
+  }

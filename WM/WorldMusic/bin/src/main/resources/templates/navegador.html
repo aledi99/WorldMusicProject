@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Footer</title>
+</head>
+<body>
+
+	<!-- Solo un footer  -->
+  <div th:fragment="navegador" class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand"><a class="nav-link-social" href="#" th:href="@{/inicio}">World Music<img src="../static/img/logo.png"  th:src="@{/img/logo.png}" width="40" height="40"></h3> 
+          <nav class="nav nav-masthead2 font-weight-bold">
+                <a class="nav-link nav-social" href="#" th:href="@{/producto}">Productos</a>
+                <a class="nav-link nav-social" href="#" th:href="@{/concierto}">Conciertos</a>
+                <a class="nav-link nav-social" href="#" th:href="@{/ajustes}">Ajustes</a>
+          </nav>
+          <nav class="nav nav-masthead">
+            <a class="nav-link nav-social" href="#" th:href="@{/login}">¡Inicia sesión!</a>
+            <a class="nav-link nav-social" href="#" th:href="@{/registro}">¡Únete a nuestro mundo!</a>
+          </nav>
+        </div>
+      </div>
+  
+</body>
+</html>

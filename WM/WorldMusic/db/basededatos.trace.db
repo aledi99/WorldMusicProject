@@ -376,3 +376,11 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/ale
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
 	... 62 more
+2019-05-22 19:05:45 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""COD_POSTAL"" INTEGER NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""COD_POSTAL"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
+2019-05-22 19:05:45 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""COD_POSTAL"" INTEGER NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""COD_POSTAL"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
