@@ -8,12 +8,18 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+
 
 @Configuration
 @EnableWebSecurity
 public class SecurityWeb extends WebSecurityConfigurerAdapter {
 	
 	private UserDetailsService userDetailsService;
+	
+	public SecurityWeb(UserDetailsService userDetailsService) {
+		this.userDetailsService = userDetailsService;
+	}
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
@@ -23,7 +29,15 @@ public class SecurityWeb extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
-		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+		//auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+		auth.userDetailsService(userDetailsService).passwordEncoder(NoOpPasswordEncoder.getInstance());
+		
+		/*auth
+		.inMemoryAuthentication()
+		.passwordEncoder(NoOpPasswordEncoder.getInstance())
+		.withUser("admin@admin.com")
+		.password("admin")
+		.roles("ADMIN");*/
 		
 	}
 	
@@ -32,7 +46,7 @@ public class SecurityWeb extends WebSecurityConfigurerAdapter {
 
 		http
 		.authorizeRequests()
-			.antMatchers("/css/**","/js/**","/webjars/**").permitAll()
+			.antMatchers("/css/**","/js/**","/webjars/**", "/styles/**", "/img/**", "/fonts/**", "/scripts/**", "/h2-console/**").permitAll()
 			.antMatchers("/admin/**").hasAnyRole("ADMIN")
 			.anyRequest().authenticated()
 			.and()
@@ -42,7 +56,13 @@ public class SecurityWeb extends WebSecurityConfigurerAdapter {
 			.and()
 		.logout()
 			.logoutUrl("/logout")
-			.permitAll();
+			.permitAll().
+			 and()
+			.exceptionHandling()
+			.accessDeniedPage("/acceso-denegado");
+		
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
 	
 	}
 }

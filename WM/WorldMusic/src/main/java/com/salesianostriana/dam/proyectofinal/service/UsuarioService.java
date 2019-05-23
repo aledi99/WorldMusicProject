@@ -8,7 +8,7 @@ import com.salesianostriana.dam.proyectofinal.repository.UsuarioRepository;
 @Service
 public class UsuarioService extends BaseService<Usuario, Long, UsuarioRepository> {
 
-	public Usuario buscarPorEmail(String email) {
-		return repositorio.findFirstByEmail(email);
+	public Usuario buscarPorCorreo(String correo) {
+		return repositorio.findFirstByCorreo(correo);
 	}
 }
