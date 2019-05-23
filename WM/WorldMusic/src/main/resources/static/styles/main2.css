@@ -139,6 +139,8 @@ body {
 }
 
 
+
+
 .imagen {
   width: 10px;
   height: 10px;
@@ -170,6 +172,36 @@ body {
   height: 505px;
   max-height: 1005px;
   border-radius: 10px;
+}
+
+.card-img-overlay {
+color: #fff;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  float: left;
+  font-size: 20px;
+}
+
+.card {
+  background-color: transparent;
+  transition: all .55s;
+  
+}
+
+.card-img-overlay h2{
+  display: none;
+  transition: all .55s;
+}
+
+.card-img-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.466);
+  transition: all .55s;
+  
+}
+
+.card-img-overlay:hover h2{
+  display: block;
+  transition: all .55s;
 }
 
 .nav-masthead2 {
