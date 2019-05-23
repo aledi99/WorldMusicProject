@@ -30,7 +30,7 @@ public class SecurityWeb extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
 		//auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-		auth.userDetailsService(userDetailsService).passwordEncoder(NoOpPasswordEncoder.getInstance());
+		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 		
 		/*auth
 		.inMemoryAuthentication()

@@ -302,12 +302,25 @@ body {
   .masthead {
     position: fixed;
     top: 0;
-    height: 
+    background-color: rgba(87, 0, 0, 0.418);
+    transition: all .55s;
+  }
+
+  .masthead:hover {
+    background-color: rgba(87, 0, 0, 0.952);
+    transition: all .55s;
   }
 
   .mastfoot {
     position: fixed;
     padding-top:30px;
+    background-color: rgba(0, 0, 0, 0.418);
+    transition: all .55s;
+  }
+
+  .mastfoot:hover {
+    background-color: rgba(0, 0, 0, 0.952);
+    transition: all .55s;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
