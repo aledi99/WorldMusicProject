@@ -23,12 +23,12 @@
 
 				<div class="container">
 					<form class="form-horizontal" method="POST" action="#"
-						th:action="${producto.idProducto != 0} ? @{/editarProducto/submit} : @{/newProducto/submit}" th:object="${producto}"
+						th:action="${producto.id != 0} ? @{/editarProducto/submit} : @{/newProducto/submit}" th:object="${producto}"
 						role="form">
 						
 						<h2 class="titulo">Registration</h2>
 						
-						<input th:if="*{idProducto != 0}" type="hidden" name="idProducto" th:field="*{idProducto}" />
+						<input th:if="*{id != 0}" type="hidden" name="idProducto" th:field="*{idProducto}" />
 						
 						<div class="form-group">
 							<label class="col-md-9 control-label" for="nombre">Nombre</label>

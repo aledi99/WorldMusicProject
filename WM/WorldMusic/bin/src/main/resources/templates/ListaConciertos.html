@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Productos</title>
+    <meta name="description" content="Demo of A Free Coming Soon Bootstrap 4 Template by TemplateFlip.com." />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" th:href="@{/css/min.css}" rel="stylesheet">
+    <link href="styles/main2.css" th:href="@{/styles/main2.css}" rel="stylesheet">
+</head>
+
+<body id="top">
+    <div class="site-wrapper col-md-14">
+        <div class="site-wrapper-inner">
+            <div th:insert="navegador :: navegador"></div>
+            <div class="cover-container">
+
+                <a href="#" th:href="@{/newConcierto}">Añadir nuevo Producto</a> <br>
+
+                <table border=1>
+                    <thead>
+                        <tr>
+                            
+                           <th>Id Concierto</th> 
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Fecha de Publicación</th>
+                            <th>PvP</th>
+                            <th>Artista</th>
+                            <th>Fecha de Concierto</th>
+                            <th>Lugar del Concierto</th>
+                            <th>En Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="concierto : ${listaConcierto}">
+                            <td th:text="${concierto.idProducto}">1</td>
+                            <td th:text="${concierto.nombre}">Nombre</td>
+                            <td th:text="${concierto.descripcion}">Descripción</td>
+                            <td th:text="${concierto.fechaPubl}">Fecha Publicación</td>
+                            <td th:text="${concierto.pvp}">PvP</td>
+                            <td th:text="${concierto.artista}">Artista</td>
+                            <td th:text="${concierto.fechaConc}">Fecha Concierto</td>
+                            <td th:text="${concierto.lugarConc}">Lugar del Concierto</td>
+                            <td th:text="${concierto.stock}">Stock</td>
+                            <td>
+                                <a href="#" th:href="@{/editarConcierto/{idProducto}(idProducto=${concierto.idProducto})}">Editar</a>
+                                <a href="#" th:href="@{/borrarConcierto/{idProducto}(idProducto=${concierto.idProducto})}">Borrar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+
+            <div class="mastfoot col-md-12">
+                <p class="lead">
+                    <button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Acerca
+						de</button>
+                </p>
+                <div class="inner">
+                    <p>
+                        &copy; 2019. World Music. <a href="https://templateflip.com/" target="_blank">España</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="subscribeModalLabel">Datos de desarrolladores:
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <p>Nuestro correo:
+                                        <h3 target="_blank">alediazuni@gmail.com</h3>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default">Contacta
+								con nosotros</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

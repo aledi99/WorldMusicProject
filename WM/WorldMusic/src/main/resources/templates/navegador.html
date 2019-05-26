@@ -7,20 +7,24 @@
 <body>
 
 	<!-- Solo un footer  -->
-  <div th:fragment="navegador" class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand"><a class="nav-link-social" href="#" th:href="@{/inicio}">World Music<img src="../static/img/logo.png"  th:src="@{/img/logo.png}" width="40" height="40"></h3> 
-          <nav class="nav nav-masthead2 font-weight-bold">
-                <a class="nav-link nav-social" href="#" th:href="@{/producto}">Productos</a>
-                <a class="nav-link nav-social" href="#" th:href="@{/concierto}">Conciertos</a>
-                <a class="nav-link nav-social" href="#" th:href="@{/ajustes}">Ajustes</a>
-          </nav>
-          <nav class="nav nav-masthead">
-            <a class="nav-link nav-social" href="#" th:href="@{/login}">¡Inicia sesión!</a>
-            <a class="nav-link nav-social" href="#" th:href="@{/newUsuario}">¡Únete a nuestro mundo!</a>
-          </nav>
-        </div>
-      </div>
+  
+        <nav th:fragment="navegador" class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            <a href="#" th:href="@{/inicio}">World Music <img th:src="@{/img/logo.png}"> </a>
+    </div>
+    <ul class="nav navbar-nav m-auto">
+      <li><a href="#" th:href="@{/producto}">Producto</a></li>
+      <li><a href="#" th:href="@{/concierto}">Concierto</a></li>
+      <li><a href="#" th:href="@{/ajustes}">Ajustes</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" th:href="@{/registro}"><span class="glyphicon glyphicon-user"></span> ¡Regístrate!</a></li>
+      <li><a href="#" th:href="@{/login}"><span class="glyphicon glyphicon-log-in"></span> ¡Inicia sesión!</a></li>
+    </ul>
+  </div>
+</nav>
+
   
 </body>
 </html>

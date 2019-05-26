@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://http://www.thymeleaf.org/">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Ejemplo de carrito de la compra</title>
+
+<!-- Bootstrap core CSS -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" />
+	
+	 <link href="../static/styles/main2.css" th:href="@{/styles/main2.css}" rel="stylesheet" />
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<div th:insert="navegador :: navegador"></div>
+
+<div class="trend-w3layouts">
+	<div class="container" style="margin-bottom: 3%;">
+	<h2>Gestión de Productos</h2>
+	<div class="principal">
+		<!-- Al buscar productos y querer mostrar el resultado de la búsqueda paginado, para poder
+		contar con los datos en la url en lugar de en el cuerpo, usamos método get en lugar de post
+		
+		<!--    <form action="#" th:action="@{search}" th:object="${searchForm}" method="POST"> -->
+		 <form action="#" th:action="@{/productosbuscados}" method="GET">
+		<input type="text" name="nombre" placeholder="Buscar Por Nombre" style="margin-left: 5%; padding: 4px;" />
+		<button class="btn- btn-danger" type="submit"  style="padding: 4px;">
+			<span class="glyphicon glyphicon-search"></span>
+		</button>
+		</form>
+
+
+</div>
+</div>
+</div>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3 col-sm-6" th:each="producto : ${productos}" style="height: 550px;">
+				<span class="thumbnail"> 
+					<img
+						
+						src="https://s12.postimg.org/41uq0fc4d/item_2_180x200.png"
+						alt="..."
+						class="img-responsive" height="150px" />
+					<h4><span th:text="${producto.nombre}">Nombre del producto</span></h4>
+					<div class="ratings">
+						<span class="glyphicon glyphicon-star"></span> <span
+							class="glyphicon glyphicon-star"></span> <span
+							class="glyphicon glyphicon-star"></span> <span
+							class="glyphicon glyphicon-star"></span> <span
+							class="glyphicon glyphicon-star-empty"></span>
+					</div>
+					<p><span th:text="${producto.descripcion}">Una descripción algo más larga del producto, para que al menos pueda ocupar más de una línea.</span>.</p>
+					<hr class="line" />
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<p class="price"><span th:text="${producto.pvp}">23,99€</span></p>
+						</div>
+						<div class="col-md-6 col-sm-6">	
+						
+						<!-- En el botón comprar de cada producto, cogemos el id de dicho producto
+						como ya hemos hecho en ejemplos anteriores, mediante el id -->	
+											
+							<a href="/productoACarrito/" th:href="@{/productoACarrito/{idProducto}(idProducto=${producto.idProducto})}">
+								<button type="button" class="btn btn-primary">
+  									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp; Comprar
+								</button>
+							</a>
+						</div>
+
+					</div>
+				</span>
+			</div>
+
+
+		</div>
+		<!-- Para la paginación -->
+		
+		<div class="row">
+			<div class="form-group col-md-1">
+				<select class="form-control pagination" id="pageSizeSelect">
+					<option th:each="pageSize : ${pageSizes}" th:text="${pageSize}"
+						th:value="${pageSize}"
+						th:selected="${pageSize} == ${selectedPageSize}"></option>
+				</select>
+			</div>
+			<div th:if="${productos.totalPages != 1}"
+				class="form-group col-md-11 pagination-centered">
+				<ul class="pagination">
+					<!-- Si el número de página es cero, deshabilitamos el enlace -->
+					<li th:class="${productos.number == 0} ? disabled">
+						<!-- Este enlace nos debe llevar a la primera página, con el tamaño de página actual -->
+						<a class="pageLink"
+						th:href="@{/productosbuscados/(pageSize=${selectedPageSize}, page=1, nombre=${param.nombre})}">&laquo;</a>
+					</li>
+					<!-- Si el número de página es cero, deshabilitamos el enlace -->
+					<li th:class="${productos.number == 0} ? disabled">
+						<!-- Este enlace nos debe llevar a la página anterior, con el tamaño de página actual -->						
+						<a class="pageLink" th:href="@{/productosbuscados/(pageSize=${selectedPageSize}, page=${productos.number}, nombre=${param.nombre})}">&larr;</a>
+					</li>
+					<!-- Este bucle genera los enlaces para las demás páginas -->
+					<li
+						th:class="${productos.number == (page - 1)} ? 'active pointer-disabled'"
+						th:each="page : ${#numbers.sequence(pager.startPage, pager.endPage)}">
+						<a class="pageLink"
+						th:href="@{/productosbuscados/(pageSize=${selectedPageSize}, page=${page}, nombre=${param.nombre})}"
+						th:text="${page}"></a>
+					</li>
+					<!-- Enlace a la siguiente página; si estamos en la última queda desabilitado  -->
+					<li
+						th:class="${productos.number + 1 == productos.totalPages} ? disabled">
+						<a class="pageLink"
+						th:href="@{/productosbuscados/(pageSize=${selectedPageSize}, page=${productos.number + 2}, nombre=${param.nombre})}">&rarr;</a>
+					</li>
+					<!-- Enlace a la última página; si estamos en la última queda desabilitado  -->				
+					<li
+						th:class="${productos.number + 1 == productos.totalPages} ? disabled">
+						<a class="pageLink"
+						th:href="@{/productosbuscados/(pageSize=${selectedPageSize}, page=${productos.totalPages}), nombre=${param.nombre}}">&raquo;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		
+	</div>
+	<!-- /.container -->
+	
+	<footer>
+      <div class="mastfoot col-md-14">
+            <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Acerca de</button></p>
+        <div class="inner">
+          <p>&copy; 2019. World Music. <a href="https://templateflip.com/" target="_blank">España</a>.</p>
+        </div>
+      </div>
+      
+      </footer>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script th:src="@{/js/app.js}"></script>
+</body>
+</html>

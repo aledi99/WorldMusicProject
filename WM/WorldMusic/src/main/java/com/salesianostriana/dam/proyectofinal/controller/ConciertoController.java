@@ -1,14 +1,20 @@
 package com.salesianostriana.dam.proyectofinal.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.salesianostriana.dam.proyectofinal.model.Concierto;
+import com.salesianostriana.dam.proyectofinal.model.Pager;
 import com.salesianostriana.dam.proyectofinal.model.Producto;
 import com.salesianostriana.dam.proyectofinal.repository.ProductoRepository;
 import com.salesianostriana.dam.proyectofinal.service.ConciertoService;
@@ -20,10 +26,7 @@ public class ConciertoController {
 	@Autowired
 	private ConciertoService servicioConcierto;
 	
-	@GetMapping("/concierto")
-	public String producto(Model model) {
-		return "Conciertos";
-	}
+	
 	
 
 	
@@ -48,10 +51,10 @@ public class ConciertoController {
 		return "ListaConciertos";
 	}
 	
-	@GetMapping("/editarConcierto/{idProducto}")
-	public String mostrarFormularioEdicion(@PathVariable("idProducto") long idProducto, Model model) {
+	@GetMapping("/editarConcierto/{idConcierto}")
+	public String mostrarFormularioEdicion(@PathVariable("idConcierto") long idConcierto, Model model) {
 		
-		Producto editConcierto = servicioConcierto.findById(idProducto);
+		Concierto editConcierto = servicioConcierto.findById(idConcierto);
 		if (editConcierto != null) {
 			model.addAttribute("concierto", editConcierto);
 			return "RegisterConcierto";
@@ -61,6 +64,7 @@ public class ConciertoController {
 		
 		
 	}
+	
 	
 	@PostMapping("/editarConcierto/submit")
 	public String procesarFormularioEdicion(@ModelAttribute("concierto") Concierto a) {

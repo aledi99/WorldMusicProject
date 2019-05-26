@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -28,7 +27,8 @@ public class LineaPedido {
 
 	@OneToMany
 	private List<Producto> producto = new ArrayList<>();
+	
+	@OneToMany
+	private List<Concierto> concierto = new ArrayList<>();
 
-	@ManyToOne
-	private Carrito carrito;
 }

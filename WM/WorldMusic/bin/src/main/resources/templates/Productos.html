@@ -13,69 +13,84 @@
 <link
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="css/font-awesome.min.css" th:href="@{/css/min.css}" rel="stylesheet">
-<link href="styles/main2.css" th:href="@{/styles/main2.css}" rel="stylesheet">
+<link href="css/font-awesome.min.css" th:href="@{/css/min.css}"
+	rel="stylesheet">
+<link href="../static/styles/main2.css" th:href="@{/styles/main2.css}"
+	rel="stylesheet">
 </head>
 <body id="top">
-	<div class="site-wrapper col-md-14">
-		<div class="site-wrapper-inner">
-			<div class="cover-container">
-				<div th:insert="navegador :: navegador"></div>
-				<br>
-
-
-
-				<div class="col-md-10 contenido"></div>
-
-
-			</div>
-
-
-
-			<div class="mastfoot col-md-12">
-				<p class="lead">
-					<button type="button" class="btn btn-lg btn-default btn-notify"
-						data-toggle="modal" data-target="#subscribeModal">Acerca
-						de</button>
-				</p>
+<header class="header-fixed">
+		<div th:fragment="navegador" class="masthead clearfix">
 				<div class="inner">
-					<p>
-						&copy; 2019. World Music. <a href="https://templateflip.com/"
-							target="_blank">España</a>.
-					</p>
+				  <h3 class="masthead-brand"><a class="nav-link-social" href="#" th:href="@{/inicio}">World Music<img src="../static/img/logo.png"  th:src="@{/img/logo.png}" width="40" height="40"></h3> 
+				  <nav class="nav nav-masthead2 font-weight-bold">
+						<a class="nav-link nav-social" href="#" th:href="@{/producto}">Productos</a>
+						<a class="nav-link nav-social" href="#" th:href="@{/concierto}">Conciertos</a>
+						<a class="nav-link nav-social" href="#" th:href="@{/ajustes}">Ajustes</a>
+				  </nav>
+				  <nav class="nav nav-masthead">
+					<a class="nav-link nav-social" href="#" th:href="@{/login}">¡Inicia sesión!</a>
+					<a class="nav-link nav-social" href="#" th:href="@{/newUsuario}">¡Únete a nuestro mundo!</a>
+				  </nav>
 				</div>
-			</div>
-			<div class="modal fade" id="subscribeModal" tabindex="-1"
-				role="dialog" aria-labelledby="subscribeModalLabel"
-				aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="subscribeModalLabel">Datos de
-								desarrolladores:</h5>
-							<button type="button" class="close" data-dismiss="modal"
-								aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<form>
-								<div class="form-group">
-									<p>Nuestro correo:
-									<h3 target="_blank">alediazuni@gmail.com</h3>
+			  </div>
+</header>
 
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default">Contacta
-								con nosotros</button>
-						</div>
+			<section role="main">
+			<div class="cover-container">
+
+
+				<div class="row 3">
+
+					<div class="card img-fluid col-md-4" style="width: 400px">
+						<a href=""> <img class="card-img-top"
+							src="../static/img/guitar.jpg" th:src="@{/img/guitar.jpg}"
+							alt="Card image" style="width: 400px">
+							<div class="card-img-overlay">
+								<h2>Instrumentos</h2>
+							</div>
+						</a>
 					</div>
+					
+					<div class="card img-fluid col-md-4" style="width: 400px">
+						<a href=""> <img class="card-img-top"
+							src="../static/img/imagine-dragons.jpg" th:src="@{/img/imagine-dragons.jpg}"
+							alt="Card image" style="width: 400px">
+							<div class="card-img-overlay">
+								<h2>Discografía</h2>
+							</div>
+						</a>
+					</div>
+					
+					<div class="card img-fluid col-md-4" style="width: 400px">
+						<a href=""> <img class="card-img-top"
+							src="../static/img/fondo.jpg" th:src="@{/img/fondo.jpg}"
+							alt="Card image" style="width: 400px">
+							<div class="card-img-overlay">
+								<h2>Otros</h2>
+							</div>
+						</a>
+					</div>
+
+
+
+
+
+
 				</div>
 			</div>
-		</div>
-	</div>
+			
+			</section>
+
+
+
+			
+			<footer class="footer">
+					<div class="container">
+					  <span class="text-muted">Place sticky footer content here.</span>
+					</div>
+				  </footer>
+		
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

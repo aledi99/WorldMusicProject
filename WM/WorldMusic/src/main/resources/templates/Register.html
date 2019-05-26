@@ -17,8 +17,11 @@
       <div class="cover-container">
     
         <div class="container">
-          <form class="form-horizontal" method="POST" action="#" th:action="@{/newUsuario/submit}" th:object="${usuario}" role="form">
+          <form class="form-horizontal" method="POST" action="#" th:action="${usuario.idUsuario != 0} ? @{/editarUsuario/submit} :@{/newUsuario/submit}" th:object="${usuario}" role="form">
               <h2 class="titulo">Registration</h2>
+              
+              <input th:if="*{idUsuario != 0}" type="hidden" name="idUsuario" th:field="*{idUsuario}" />
+              
               <div class="form-group">
                 <label class="col-md-9 control-label" for="nombre">Nombre</label>  
                 <div class="col-md-9">

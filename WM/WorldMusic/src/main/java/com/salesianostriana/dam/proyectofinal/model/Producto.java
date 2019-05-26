@@ -1,37 +1,41 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
+
+
 import java.time.LocalDate;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
-public class Producto {
+public class Producto extends Servicio {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idProducto;// El id que gestionará los distintos conciertos que existen en la tienda
+	
+	
+	
+	
+	
+	public Producto(long id, String nombre, String descripcion, double pvp, boolean stock, LocalDate fechaPubl,
+		 Categoria categoria, LineaPedido lineaPedido) {
+		super(id, nombre, descripcion, pvp, stock, fechaPubl);
 
-	private String nombre, descripcion;
-	
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate fechaPubl; // Fecha en la cual el Producto ha salido al mercado de la tienda
-	
-	private double pvp; // Precio del producto
-	private boolean stock; // El valor será "true" si está disponible-en stock; y "false" si no queda
-							// ninguna unidad del producto
+		this.categoria = categoria;
+		this.lineaPedido = lineaPedido;
+	}
+
 	@ManyToOne
 	private Categoria categoria;
 	

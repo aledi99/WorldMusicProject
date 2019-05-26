@@ -17,9 +17,18 @@ body {
  max-width: 530px;
  padding: 15px;
  margin: 0 auto;
- border-radius: 0.3em;
- background-color: rgba(0,0,0,0.5) !important;
+ border-radius: 3px;
+ background-color: rgba(0,0,0,0.5);
  color: white;
+ border: 1px solid;
+ border-color: rgb(216, 25, 25, 0.5);
+ transition: all .55s;
+}
+
+form:hover {
+  background-color: rgba(0, 0, 0, 0.822);
+  border-color: rgb(216, 25, 25);
+  transition: all .55s;
 }
 
 *[role="form"] h2 { 

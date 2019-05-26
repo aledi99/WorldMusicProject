@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.salesianostriana.dam.proyectofinal.model.Producto;
 import com.salesianostriana.dam.proyectofinal.service.CarritoService;
+import com.salesianostriana.dam.proyectofinal.service.ConciertoService;
 import com.salesianostriana.dam.proyectofinal.service.ProductoService;
 
 
@@ -25,6 +26,9 @@ public class CarritoController {
 	@Autowired
 	private ProductoService servicioProducto;
 	
+	@Autowired
+	private ConciertoService servicioConcierto;
+	
     @Autowired
     public CarritoController(CarritoService servicioCarrito, ProductoService servicioProducto) {
         this.servicioCarrito = servicioCarrito;
@@ -34,7 +38,7 @@ public class CarritoController {
     @GetMapping ("/carrito")
     public String showCarrito (Model model) {
     	
-    	if (model.addAttribute("producto",servicioCarrito.getProductsInCart()) == null)
+    	if (model.addAttribute("productos",servicioCarrito.getProductsInCart()) == null)
     		return "redirect:/";
     	return "cart";
     }
@@ -43,6 +47,14 @@ public class CarritoController {
     public String productoACarrito (@PathVariable("idProducto") Long idProducto, Model model) {
     	
     	servicioCarrito.addProducto(servicioProducto.findById(idProducto));
+    	    		 	
+    	return "redirect:/carrito";
+    }
+    
+    @GetMapping ("/conciertoACarrito/{idConcierto}")
+    public String conciertoACarrito (@PathVariable("idConcierto") Long idConcierto, Model model) {
+    	
+    	servicioCarrito.addConcierto(servicioConcierto.findById(idConcierto));
     	    		 	
     	return "redirect:/carrito";
     }

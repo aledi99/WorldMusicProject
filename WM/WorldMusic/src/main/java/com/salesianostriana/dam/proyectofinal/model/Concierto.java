@@ -2,9 +2,9 @@ package com.salesianostriana.dam.proyectofinal.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,13 +16,10 @@ import lombok.NoArgsConstructor;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
-public class Concierto extends Producto {
+@DiscriminatorValue("C")
+public class Concierto extends Servicio {
 
-	
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idConcierto;// El id que gestionará los distintos conciertos que existen en la tienda
 	
 	private String artista;
 	
@@ -30,4 +27,21 @@ public class Concierto extends Producto {
 	private LocalDate fechaConc;
 	
 	private String lugarConc;
+	
+	
+	
+	public Concierto(long id, String nombre, String descripcion, double pvp, boolean stock, LocalDate fechaPubl,
+			 String artista, LocalDate fechaConc, String lugarConc, LineaPedido lineaPedido) {
+		super(id, nombre, descripcion, pvp, stock, fechaPubl);
+
+		this.artista = artista;
+		this.fechaConc = fechaConc;
+		this.lugarConc = lugarConc;
+		this.lineaPedido = lineaPedido;
+	}
+
+
+
+	@ManyToOne
+	private LineaPedido lineaPedido;
 }

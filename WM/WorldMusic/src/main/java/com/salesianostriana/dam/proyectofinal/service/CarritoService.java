@@ -10,18 +10,21 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.salesianostriana.dam.proyectofinal.model.Carrito;
+
+import com.salesianostriana.dam.proyectofinal.model.Concierto;
 import com.salesianostriana.dam.proyectofinal.model.Producto;
-import com.salesianostriana.dam.proyectofinal.repository.CarritoRepository;
+import com.salesianostriana.dam.proyectofinal.repository.ConciertoRepository;
 import com.salesianostriana.dam.proyectofinal.repository.ProductoRepository;
 
 @Service
 @Scope (value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
-public class CarritoService extends BaseService<Carrito, Long, CarritoRepository> {
+public class CarritoService {
 	
 private ProductoRepository productoRepository;
+private ConciertoRepository conciertoRepository;
 	
 	private Map<Producto, Integer> producto = new HashMap <> ();
+	private Map<Concierto, Integer> concierto = new HashMap <> ();
 	
 	@Autowired
 	public CarritoService (ProductoRepository productorepository) {
@@ -55,6 +58,30 @@ private ProductoRepository productoRepository;
                 producto.replace(p, producto.get(p) - 1);
             else if (producto.get(p) == 1) {
                 producto.remove(p);
+            }
+        }
+	}
+	
+	public void addConcierto(Concierto p) {
+		if (concierto.containsKey(p)) {
+			concierto.replace(p, concierto.get(p)+1);//Ya programamos como "mayores" y podemos poner algún número directamente en el código
+		}else {
+			concierto.put(p, 1);
+		}
+	}
+	
+	/**
+	 * Método que elimina un producto del carrito.
+	 * Si en el carrito la cantidad de dicho producto es más de uno baja la cantidad en una unidad y si es uno elimina el producto entero
+	 * @param producto
+	 * */
+	
+	public void removeConcierto (Concierto p) {
+        if (concierto.containsKey(p)) {
+            if (concierto.get(p) > 1)
+            	concierto.replace(p, concierto.get(p) - 1);
+            else if (concierto.get(p) == 1) {
+            	concierto.remove(p);
             }
         }
 	}

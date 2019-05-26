@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  background: url(../img/fondo.png) no-repeat center center;
+  background: url(../img/fondo.png) no-repeat fixed center;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -56,7 +56,12 @@ body {
   vertical-align: top;
 }
 
+table {
+	margin: 0 auto;
+}
+
 .cover-container {
+	padding-top: 100px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -127,16 +132,19 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 10px;
 }
 
 /*
  * Header
  */
 .masthead-brand {
+  padding-top: 15px;
   margin-bottom: 10px;
   
 }
+
+
 
 
 .imagen {
@@ -172,16 +180,47 @@ body {
   border-radius: 10px;
 }
 
+.card-img-overlay {
+color: #fff;
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
+  float: left;
+  font-size: 20px;
+}
+
+.card {
+  background-color: transparent;
+  transition: all .55s;
+  
+}
+
+.card-img-overlay h2{
+  display: none;
+  transition: all .55s;
+}
+
+.card-img-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.466);
+  transition: all .55s;
+  
+}
+
+.card-img-overlay:hover h2{
+  display: block;
+  transition: all .55s;
+}
+
 .nav-masthead2 {
   text-align: center;
   float: left;
   text-transform: uppercase;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-top:15px;
 }
 
 .nav-masthead2 .nav-link {
   margin-left: 55px;
-  display: block;
+  
   font-size: 15px;
   text-decoration: none;
   border-top: 1px solid rgb(255, 255, 255);
@@ -219,6 +258,7 @@ body {
     
   }
   .nav-masthead {
+  margin-top: 15px;
     float: right;
   }
 }
@@ -300,14 +340,26 @@ body {
 
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
     top: 0;
-    height: 
+    background-color: rgba(87, 0, 0, 0.418);
+    transition: all .55s;
+  }
+
+  .masthead:hover {
+    background-color: rgba(87, 0, 0, 0.952);
+    transition: all .55s;
   }
 
   .mastfoot {
-    position: fixed;
-    padding-top:30px;
+    bottom: 0;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.418);
+    transition: all .55s;
+  }
+
+  .mastfoot:hover {
+    background-color: rgba(0, 0, 0, 0.952);
+    transition: all .55s;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -320,6 +372,11 @@ body {
     width: 100%;
     /* Must be percentage or pixels for horizontal alignment */
   }
+  
+  article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 }
 
 

@@ -35,6 +35,7 @@ public class UsuarioController {
 	
 	@GetMapping("/registro")
 	public String mostrarRegistro(Model model) {
+		model.addAttribute("usuario", new Usuario());
 		return "Register";
 	}
 	
@@ -90,5 +91,6 @@ public class UsuarioController {
 		servicioUsuario.save(a);
 		return "redirect:/";
 	}
+	
 
 }

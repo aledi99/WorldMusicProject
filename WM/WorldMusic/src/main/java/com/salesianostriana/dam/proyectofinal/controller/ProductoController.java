@@ -47,10 +47,10 @@ public class ProductoController {
 		return "ListaProductos";
 	}
 	
-	@GetMapping("/editarProducto/{idProducto}")
-	public String mostrarFormularioEdicion(@PathVariable("idProducto") long idProducto, Model model) {
+	@GetMapping("/editarProducto/{id}")
+	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 		
-		Producto editProducto = servicioProducto.findById(idProducto);
+		Producto editProducto = servicioProducto.findById(id);
 		if (editProducto != null) {
 			model.addAttribute("producto", editProducto);
 			return "RegisterProducto";
@@ -67,9 +67,9 @@ public class ProductoController {
 		return "redirect:/listProducto";
 	}
 	
-	@GetMapping("/borrarProducto/{idProducto}")
-	public String borrar(@PathVariable("idProducto") long idProducto) {
-		servicioProducto.deleteById(idProducto);
+	@GetMapping("/borrarProducto/{id}")
+	public String borrar(@PathVariable("id") long id) {
+		servicioProducto.deleteById(id);
 		return "redirect:/listProducto";
 	}
 	
