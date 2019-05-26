@@ -19,32 +19,37 @@
             <div th:insert="navegador :: navegador"></div>
             <div class="cover-container">
 
-                <a href="#" th:href="@{/newProducto}">Añadir nuevo Producto</a> <br>
+                <a href="#" th:href="@{/newConcierto}">Añadir nuevo Producto</a> <br>
 
                 <table border=1>
                     <thead>
                         <tr>
-                            <th>Id</th>
+                            
+                           <th>Id Concierto</th> 
                             <th>Nombre</th>
-                            <th>Categoría</th>
                             <th>Descripción</th>
                             <th>Fecha de Publicación</th>
                             <th>PvP</th>
+                            <th>Artista</th>
+                            <th>Fecha de Concierto</th>
+                            <th>Lugar del Concierto</th>
                             <th>En Stock</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="producto : ${listaProducto}">
-                            <td th:text="${producto.idProducto}">1</td>
-                            <td th:text="${producto.nombre}">Nombre</td>
-                            <td th:text="${producto.categoria}">Categoría</td>
-                            <td th:text="${producto.descripcion}">Descripción</td>
-                            <td th:text="${producto.fechaPubl}">Fecha Publicación</td>
-                            <td th:text="${producto.pvp}">PvP</td>
-                            <td th:text="${producto.stock}">Stock</td>
+                        <tr th:each="concierto : ${listaConcierto}">
+                            <td th:text="${concierto.idProducto}">1</td>
+                            <td th:text="${concierto.nombre}">Nombre</td>
+                            <td th:text="${concierto.descripcion}">Descripción</td>
+                            <td th:text="${concierto.fechaPubl}">Fecha Publicación</td>
+                            <td th:text="${concierto.pvp}">PvP</td>
+                            <td th:text="${concierto.artista}">Artista</td>
+                            <td th:text="${concierto.fechaConc}">Fecha Concierto</td>
+                            <td th:text="${concierto.lugarConc}">Lugar del Concierto</td>
+                            <td th:text="${concierto.stock}">Stock</td>
                             <td>
-                                <a href="#" th:href="@{/editarProducto/{idProducto}(idProducto=${producto.idProducto})}">Editar</a>
-                                <a href="#" th:href="@{/borrarProducto/{idProducto}(idProducto=${producto.idProducto})}">Borrar</a>
+                                <a href="#" th:href="@{/editarConcierto/{idProducto}(idProducto=${concierto.idProducto})}">Editar</a>
+                                <a href="#" th:href="@{/borrarConcierto/{idProducto}(idProducto=${concierto.idProducto})}">Borrar</a>
                             </td>
                         </tr>
                     </tbody>

@@ -51,20 +51,35 @@ public class UsuarioController {
 		
 	}
 	
-	@GetMapping("/editar/{id}")
-	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
+	@GetMapping("/listUsuario")
+	public String mostrarUsuario(Model model) {
 		
-		Usuario editUsuario = servicioUsuario.findById(id);
+		model.addAttribute("listaUsuario", servicioUsuario.findAll());
+		
+		return "ListaUsuario";
+	}
+	
+	@GetMapping("/editarUsuario/{idUsuario}")
+	public String mostrarFormularioEdicion(@PathVariable("idUsuario") long idUsuario, Model model) {
+		
+		Usuario editUsuario = servicioUsuario.findById(idUsuario);
 		if (editUsuario != null) {
-			model.addAttribute("usuarioEdit", editUsuario);
+			model.addAttribute("usuario", editUsuario);
 			return "Register";
 		} else {
 			// No existe ningún alumno con el Id proporcionado.
 			// Redirigimos hacia el listado.
-			return "redirect:/";
+			return "redirect:/listUsuario";
 		}
 		
 		
+	}
+	
+	
+	@GetMapping("/borrarUsuario/{idUsuario}")
+	public String borrar(@PathVariable("idUsuario") long idUsuario) {
+		servicioUsuario.deleteById(idUsuario);
+		return "redirect:/listUsuario";
 	}
 	
 	

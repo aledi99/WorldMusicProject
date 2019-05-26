@@ -23,12 +23,15 @@
 
 				<div class="container">
 					<form class="form-horizontal" method="POST" action="#"
-						th:action="${producto.idProducto != 0} ? @{/editarProducto/submit} : @{/newProducto/submit}" th:object="${producto}"
+						th:action="${concierto.idConcierto != 0 and concierto.idProducto != 0} ? @{/editarConcierto/submit} : @{/newConcierto/submit}" th:object="${concierto}"
 						role="form">
 						
-						<h2 class="titulo">Registration</h2>
+						<h2 class="titulo">New Concierto</h2>
 						
 						<input th:if="*{idProducto != 0}" type="hidden" name="idProducto" th:field="*{idProducto}" />
+						
+						
+						<input th:if="*{idConcierto != 0}" type="hidden" name="idConcierto" th:field="*{idConcierto}" />
 						
 						<div class="form-group">
 							<label class="col-md-9 control-label" for="nombre">Nombre</label>
@@ -90,6 +93,42 @@
 
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<label class="col-md-9 control-label" for="fechaConc">Fecha de Concierto</label>
+							<div class="col-md-9">
+								<input id="fechaConc" name="fechaConc" type="date"
+									th:field="*{fechaConc}" placeholder=""
+									class="form-control input-md" required="">
+
+							</div>
+							
+							<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-9 control-label" for="artista">Artista</label>
+							<div class="col-md-9">
+								<input id="artista" name="artista" type="text"
+									th:field="*{artista}"
+									placeholder="¿J Cole...Las Ketchup?"
+									class="form-control input-md" required="">
+							</div>
+						</div>
+							
+							
+							<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-9 control-label" for="lugarConc">Lugar del Concierto</label>
+							<div class="col-md-9">
+								<input id="lugarConc" name="lugarConc" type="text"
+									th:field="*{lugarConc}"
+									placeholder="¿Manhattan...New York?"
+									class="form-control input-md" required=""> <span
+									class="help-block">(Debe de contener al menos 8
+									caracteres)</span>
+							</div>
+						</div>
+							
+							
 
 
 

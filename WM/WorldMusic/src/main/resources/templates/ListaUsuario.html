@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Productos</title>
+    <title>Lista de Usuarios</title>
     <meta name="description" content="Demo of A Free Coming Soon Bootstrap 4 Template by TemplateFlip.com." />
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
@@ -19,32 +19,40 @@
             <div th:insert="navegador :: navegador"></div>
             <div class="cover-container">
 
-                <a href="#" th:href="@{/newProducto}">Añadir nuevo Producto</a> <br>
+                <a href="#" th:href="@{/newUsuario}">Añadir nuevo Usuario</a> <br>
 
                 <table border=1>
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th>Categoría</th>
-                            <th>Descripción</th>
-                            <th>Fecha de Publicación</th>
-                            <th>PvP</th>
-                            <th>En Stock</th>
+                            <th>Apellidos</th>
+                            <th>Nick</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Correo electrónico</th>
+                            <th>Dirección</th>
+                            <th>Número</th>
+                            <th>Código Postal</th>
+                            <th>Provincia</th>
+                            <th>Administrador</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="producto : ${listaProducto}">
-                            <td th:text="${producto.idProducto}">1</td>
-                            <td th:text="${producto.nombre}">Nombre</td>
-                            <td th:text="${producto.categoria}">Categoría</td>
-                            <td th:text="${producto.descripcion}">Descripción</td>
-                            <td th:text="${producto.fechaPubl}">Fecha Publicación</td>
-                            <td th:text="${producto.pvp}">PvP</td>
-                            <td th:text="${producto.stock}">Stock</td>
+                        <tr th:each="usuario : ${listaUsuario}">
+                            <td th:text="${usuario.idUsuario}">1</td>
+                            <td th:text="${usuario.nombre}">Nombre</td>
+                            <td th:text="${usuario.apellidos}">Apellidos</td>
+                            <td th:text="${usuario.nick}">Nick</td>
+                            <td th:text="${usuario.fechaNac}">Fecha de Nacimiento</td>
+                            <td th:text="${usuario.correo}">Correo Electrónico</td>
+                            <td th:text="${usuario.direccion}">Dirección</td>
+                            <td th:text="${usuario.numDireccion}">Número</td>                           
+                            <td th:text="${usuario.codPostal}">Código Postal</td>
+                            <td th:text="${usuario.provincia}">Provincia</td>
+                            <td th:text="${usuario.usuarioAdmin}">Administrador</td>
                             <td>
-                                <a href="#" th:href="@{/editarProducto/{idProducto}(idProducto=${producto.idProducto})}">Editar</a>
-                                <a href="#" th:href="@{/borrarProducto/{idProducto}(idProducto=${producto.idProducto})}">Borrar</a>
+                                <a href="#" th:href="@{/editarUsuario/{idUsuario}(idUsuario=${usuario.idUsuario})}">Editar</a>
+                                <a href="#" th:href="@{/borrarUsuario/{idUsuario}(idUsuario=${usuario.idUsuario})}">Borrar</a>
                             </td>
                         </tr>
                     </tbody>
