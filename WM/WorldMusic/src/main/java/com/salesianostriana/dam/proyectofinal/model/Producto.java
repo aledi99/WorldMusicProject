@@ -1,6 +1,8 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
-
+/**Clase Model de los Productos que habrá en la página
+ * @author alediaz
+ */
 
 import java.time.LocalDate;
 
@@ -25,10 +27,22 @@ import lombok.ToString;
 public class Producto extends Servicio {
 
 	
-	private String nombreCategoria;
+	private String nombreCategoria;//El nombre de la categoría a la cual está asociado el producto
 	
 	
-	
+	/**
+	 * Constructor con parámetros
+	 * @param id
+	 * @param nombre
+	 * @param descripcion
+	 * @param image
+	 * @param pvp
+	 * @param stock
+	 * @param fechaPubl
+	 * @param nombreCategoria
+	 * @param categoria
+	 * @param lineaPedido
+	 */
 	public Producto(long id, String nombre, String descripcion, String image, double pvp, boolean stock, LocalDate fechaPubl,
 		String nombreCategoria, Categoria categoria, LineaPedido lineaPedido) {
 		super(id, nombre, descripcion, image, pvp, stock, fechaPubl );
@@ -38,8 +52,8 @@ public class Producto extends Servicio {
 	}
 
 	@ManyToOne
-	private Categoria categoria;
+	private Categoria categoria;//Asociación ManyToOne con la clase Model Categoría
 	
 	@ManyToOne
-	private LineaPedido lineaPedido;
+	private LineaPedido lineaPedido;//Asociación ManyToOne con la clase Model LineaPedido
 }

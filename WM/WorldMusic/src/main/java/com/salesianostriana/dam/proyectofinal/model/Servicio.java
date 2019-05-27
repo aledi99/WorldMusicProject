@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
+/**Clase Model del Servicio (clase madre) que atenderá la tienda: Productos y Conciertos
+ * @author alediazç
+ */
+
 import java.time.LocalDate;
 
 
@@ -22,9 +26,9 @@ public class Servicio {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long id;//id de los servicios
 	
-	private String nombre, descripcion, image;
+	private String nombre, descripcion, image;//El nombre, la descripción y la imagen de los servicios
 	private double pvp; // Precio del producto
 	private boolean stock; // El valor será "true" si está disponible-en stock; y "false" si no queda
 							// ninguna unidad del producto

@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.repository;
 
+/**Clase Repository de los Productos, que implementa Jpa
+ * @author alediaz
+ */
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -22,8 +26,25 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 	
 	public  List<Producto> findByNombreCategoriaContainingIgnoreCase(String nombreCategoria);
 	
-
+	/**
+	 * Método que filtra los productos según el nombre, el cual se filtrará según la
+	 * búsqueda que se haya hecho (y pagina el resultado)
+	 * 
+	 * @param nombre
+	 * @param pageable
+	 * @return el resultado filtrado y paginado
+	 */
 	public  Page<Producto> findByNombreContainingIgnoreCase(String nombre, Pageable pageable);
+	
+	
+	/**
+	 * Método que filtra los productos según el nombre de la categoría, el cual se filtrará según la
+	 * búsqueda que se haya hecho (y pagina el resultado)
+	 * 
+	 * @param nombreCategoria
+	 * @param pageable
+	 * @return el resultado filtrado y paginado
+	 */
 	public  Page<Producto> findByNombreCategoriaContainingIgnoreCase(String nombreCategoria, Pageable pageable);
 
 }

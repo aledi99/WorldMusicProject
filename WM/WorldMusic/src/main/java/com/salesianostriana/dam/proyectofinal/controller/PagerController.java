@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.controller;
 
+/**Clase Controller de la Paginación
+ * @author alediaz
+ */
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +25,10 @@ import com.salesianostriana.dam.proyectofinal.service.ProductoService;
 public class PagerController {
 	
 	@Autowired
-	private ConciertoService servicioConcierto;
+	private ConciertoService servicioConcierto;//Instancia de la clase ConciertoService
+	
+	@Autowired
+	private ProductoService productService;//Instancia de la clase ProductoService
 	
 	private static final int BUTTONS_TO_SHOW = 5;
 	private static final int INITIAL_PAGE = 0;
@@ -29,9 +36,14 @@ public class PagerController {
 	private static final int[] PAGE_SIZES = { 5, 10, 20 };
 
 	
-	@Autowired
-	private ProductoService productService;
-	
+	/**
+	 * Muestra los productos que hay en la base de datos en forma de catálogo, con posibilidad de paginar el mismo
+	 * @param pageSize
+	 * @param page
+	 * @param nombre
+	 * @param model
+	 * @return Catalogo
+	 */
 	@GetMapping("/productosbuscados")
 	public String showProductsPage(@RequestParam("pageSize") Optional<Integer> pageSize,
             @RequestParam("page") Optional<Integer> page, @RequestParam("nombre") Optional<String> nombre, Model model) {
@@ -71,10 +83,18 @@ public class PagerController {
         model.addAttribute("pageSizes", PAGE_SIZES);
         model.addAttribute("pager", pager);
         
-    	return "list";
+    	return "Catalogo";
     }
 	
 
+	/**Muestra los conciertos que hay en la base de datos en forma de catálogo, con posibilidad de paginar el mismo
+	 * 
+	 * @param pageSize
+	 * @param page
+	 * @param nombre
+	 * @param model
+	 * @return Conciertos
+	 */
 	@GetMapping("/concierto")
 	public String mostrarConciertos(@RequestParam("pageSize") Optional<Integer> pageSize,
             @RequestParam("page") Optional<Integer> page, @RequestParam("nombre") Optional<String> nombre, Model model) {

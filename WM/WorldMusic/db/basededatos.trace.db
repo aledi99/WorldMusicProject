@@ -1582,3 +1582,51 @@ INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2
 org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"
 Data conversion error converting "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"; SQL statement:
 INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2) [22018-199]
+2019-05-27 12:24:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUCTO"("ID","DESCRIPCION","FECHA_PUBL","NOMBRE","PVP","STOCK","CATEGORIA_ID_CATEGORIA","LINEA_PEDIDO_ID_LINEA_PEDIDO","IMAGE","NOMBRE_CATEGORIA")VALUES(?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10) [22018-199]
+2019-05-27 12:24:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUCTO"("ID","DESCRIPCION","FECHA_PUBL","NOMBRE","PVP","STOCK","CATEGORIA_ID_CATEGORIA","LINEA_PEDIDO_ID_LINEA_PEDIDO","IMAGE","NOMBRE_CATEGORIA")VALUES(?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10) [22018-199]
+2019-05-27 12:38:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
+2019-05-27 12:38:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
+2019-05-27 12:53:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUCTO"("ID","DESCRIPCION","FECHA_PUBL","NOMBRE","PVP","STOCK","CATEGORIA_ID_CATEGORIA","LINEA_PEDIDO_ID_LINEA_PEDIDO","IMAGE","NOMBRE_CATEGORIA")VALUES(?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10) [22018-199]
+2019-05-27 12:53:53 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (PRODUCTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."PRODUCTO"("ID","DESCRIPCION","FECHA_PUBL","NOMBRE","PVP","STOCK","CATEGORIA_ID_CATEGORIA","LINEA_PEDIDO_ID_LINEA_PEDIDO","IMAGE","NOMBRE_CATEGORIA")VALUES(?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10) [22018-199]
+2019-05-27 13:01:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
+2019-05-27 13:01:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"
+Data conversion error converting "'' (USUARIO: ""ID_USUARIO"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."USUARIO"("ID_USUARIO","APELLIDOS","COD_POSTAL","CONTRASENYA","CORREO","DIRECCION","FECHA_NAC","NICK","NOMBRE","NUM_DIRECCION","PROVINCIA","USUARIO_ADMIN")VALUES(?,?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12) [22018-199]
+2019-05-27 13:09:15 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2) [22018-199]
+2019-05-27 13:09:15 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2) [22018-199]
+2019-05-27 13:11:44 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CONCIERTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CONCIERTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CONCIERTO"("ID","DESCRIPCION","FECHA_PUBL","IMAGE","NOMBRE","PVP","STOCK","ARTISTA","FECHA_CONC","LUGAR_CONC","LINEA_PEDIDO_ID_LINEA_PEDIDO")VALUES(?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11) [22018-199]
+2019-05-27 13:11:44 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CONCIERTO: ""ID"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CONCIERTO: ""ID"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CONCIERTO"("ID","DESCRIPCION","FECHA_PUBL","IMAGE","NOMBRE","PVP","STOCK","ARTISTA","FECHA_CONC","LUGAR_CONC","LINEA_PEDIDO_ID_LINEA_PEDIDO")VALUES(?,?,?,?,?,?,?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11) [22018-199]

@@ -1,5 +1,10 @@
 package com.salesianostriana.dam.proyectofinal.formbean;
 
+/**
+ * Clase FormBean SearchBean 
+ * @author alediaz
+ *
+ */
 public class SearchBean {
 
 	/**

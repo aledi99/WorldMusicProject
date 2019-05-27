@@ -24,15 +24,28 @@ import lombok.NoArgsConstructor;
 public class Concierto extends Servicio {
 
 	
-	private String artista;
+	private String artista;//El/Los artista/s del concierto
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate fechaConc;
+	private LocalDate fechaConc;//La fecha en la cual se va a hacer el concierto
 	
-	private String lugarConc;
+	private String lugarConc;//El lugar en el que se va a producir el concierto
 	
 	
-	
+	/**
+	 * Constructor con parámetros
+	 * @param id
+	 * @param nombre
+	 * @param descripcion
+	 * @param image
+	 * @param pvp
+	 * @param stock
+	 * @param fechaPubl
+	 * @param artista
+	 * @param fechaConc
+	 * @param lugarConc
+	 * @param lineaPedido
+	 */
 	public Concierto(long id, String nombre, String descripcion, String image, double pvp, boolean stock, LocalDate fechaPubl,
 			 String artista, LocalDate fechaConc, String lugarConc, LineaPedido lineaPedido) {
 		super(id, nombre, descripcion, image, pvp, stock, fechaPubl);
@@ -46,5 +59,5 @@ public class Concierto extends Servicio {
 
 
 	@ManyToOne
-	private LineaPedido lineaPedido;
+	private LineaPedido lineaPedido;//Asociación ManyToOne con la clase Model LineaPedido
 }

@@ -1,5 +1,8 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
+/**Clase Model de las Líneas de Pedido del Carrito
+ * @author alediaz
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,12 +26,12 @@ public class LineaPedido {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idLineaPedido;// El id que gestionará los distintos conciertos que existen en la tienda
 
-	private int cantidad;
+	private int cantidad;//La cantidad de productos que habrá en la linea de pedido
 
 	@OneToMany
-	private List<Producto> producto = new ArrayList<>();
+	private List<Producto> producto = new ArrayList<>();//Asociación OneToMany con la clase Model Producto
 	
 	@OneToMany
-	private List<Concierto> concierto = new ArrayList<>();
+	private List<Concierto> concierto = new ArrayList<>();//Asociación OneToMany con la clase Model Concierto
 
 }

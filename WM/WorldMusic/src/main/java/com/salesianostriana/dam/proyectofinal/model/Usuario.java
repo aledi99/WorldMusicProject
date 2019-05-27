@@ -1,4 +1,7 @@
 package com.salesianostriana.dam.proyectofinal.model;
+/**Clase Model de los Usuarios que estarán registrados en la página
+ * @author alediaz
+ */
 
 import java.time.LocalDate;
 
@@ -23,12 +26,12 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idUsuario;// El id que gestionará los distintos conciertos que existen en la tienda
 
-	private String nombre, apellidos, nick, correo, direccion, provincia, contrasenya;
+	private String nombre, apellidos, nick, correo, direccion, provincia, contrasenya;//Datos de información del usuario
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private LocalDate fechaNac;
+	private LocalDate fechaNac;//Fecha de Nacimiento del usuario
 	
-	private int codPostal, numDireccion;
-	private boolean usuarioAdmin;
+	private int codPostal, numDireccion;//El código postal y el número de la dirección en la que reside el usuario
+	private boolean usuarioAdmin;//Boolean que identificará si un usuario es Admin (true) o no (false)
 
 }

@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.service;
 
+/**Clase Service de las Categorías
+ * @author alediaz
+ */
+
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.proyectofinal.model.Categoria;

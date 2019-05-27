@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.service;
 
+/**Clase Service del Carrito
+ * @author alediaz
+ */
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,9 +30,15 @@ private ConciertoRepository conciertoRepository;
 	private Map<Producto, Integer> producto = new HashMap <> ();
 	private Map<Concierto, Integer> concierto = new HashMap <> ();
 	
+	/**
+	 * Constructor con parámetros
+	 * @param productorepository
+	 * @param conciertoRepository
+	 */
 	@Autowired
-	public CarritoService (ProductoRepository productorepository) {
+	public CarritoService (ProductoRepository productorepository, ConciertoRepository conciertoRepository) {
 		this.productoRepository=productorepository;
+		this.conciertoRepository=conciertoRepository;
 	}
 	
 	/**
@@ -37,7 +47,6 @@ private ConciertoRepository conciertoRepository;
 	 * 
 	 * @param producto
 	 * */
-	
 	public void addProducto (Producto p) {
 		if (producto.containsKey(p)) {
 			producto.replace(p, producto.get(p)+1);//Ya programamos como "mayores" y podemos poner algún número directamente en el código
@@ -51,7 +60,6 @@ private ConciertoRepository conciertoRepository;
 	 * Si en el carrito la cantidad de dicho producto es más de uno baja la cantidad en una unidad y si es uno elimina el producto entero
 	 * @param producto
 	 * */
-	
 	public void removeProducto (Producto p) {
         if (producto.containsKey(p)) {
             if (producto.get(p) > 1)
@@ -62,6 +70,12 @@ private ConciertoRepository conciertoRepository;
         }
 	}
 	
+	/**
+	 * Si el concierto ya está en el map (en el carrito), solo se incrementará en uno la cantidad, una unidad más
+	 * Si el concierto no está en el mapa, significa que no se ha comprado nada de él en este momento, por lo que se añade con cantidad 1
+	 * 
+	 * @param concierto
+	 * */
 	public void addConcierto(Concierto p) {
 		if (concierto.containsKey(p)) {
 			concierto.replace(p, concierto.get(p)+1);//Ya programamos como "mayores" y podemos poner algún número directamente en el código
@@ -72,10 +86,9 @@ private ConciertoRepository conciertoRepository;
 	
 	/**
 	 * Método que elimina un producto del carrito.
-	 * Si en el carrito la cantidad de dicho producto es más de uno baja la cantidad en una unidad y si es uno elimina el producto entero
-	 * @param producto
+	 * Si en el carrito la cantidad de dicho concierto es más de uno baja la cantidad en una unidad y si es uno elimina el concierto entero
+	 * @param concierto
 	 * */
-	
 	public void removeConcierto (Concierto p) {
         if (concierto.containsKey(p)) {
             if (concierto.get(p) > 1)
@@ -89,8 +102,6 @@ private ConciertoRepository conciertoRepository;
     /**
      * @return unmodifiable Copia del carrito no modificable, solo vista
      */
-	
-
     public Map<Producto, Integer> getProductsInCart() {
         return Collections.unmodifiableMap(producto);
     }

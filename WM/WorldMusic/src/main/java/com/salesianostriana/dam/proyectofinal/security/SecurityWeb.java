@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.security;
 
+/**Clase SecurityWeb de la Configuracion de la Seguridad de la Web
+ * @author alediaz
+ */
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

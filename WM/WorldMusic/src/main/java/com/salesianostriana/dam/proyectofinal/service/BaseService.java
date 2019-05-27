@@ -1,5 +1,9 @@
 package com.salesianostriana.dam.proyectofinal.service;
 
+/**Clase Service la cual implementará los métodos de Jpa a las demás clases Service
+ * @author alediaz
+ */
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

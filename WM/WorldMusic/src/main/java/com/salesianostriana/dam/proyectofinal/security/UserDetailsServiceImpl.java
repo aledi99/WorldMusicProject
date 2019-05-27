@@ -1,5 +1,8 @@
 package com.salesianostriana.dam.proyectofinal.security;
 
+/** Clase UserDetailsServiceImpl de los Servicios Detallados de los Usuarios
+ * @author alediaz
+ */
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
