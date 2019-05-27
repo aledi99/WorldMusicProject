@@ -8,7 +8,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
-
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +19,7 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
+
 @NoArgsConstructor
 @Entity
 public class Producto extends Servicio {
@@ -28,9 +29,9 @@ public class Producto extends Servicio {
 	
 	
 	
-	public Producto(long id, String nombre, String descripcion, double pvp, boolean stock, LocalDate fechaPubl,
+	public Producto(long id, String nombre, String descripcion, String image, double pvp, boolean stock, LocalDate fechaPubl,
 		 Categoria categoria, LineaPedido lineaPedido) {
-		super(id, nombre, descripcion, pvp, stock, fechaPubl);
+		super(id, nombre, descripcion, image, pvp, stock, fechaPubl );
 
 		this.categoria = categoria;
 		this.lineaPedido = lineaPedido;

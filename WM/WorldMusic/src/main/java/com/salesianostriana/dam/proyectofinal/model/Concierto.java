@@ -30,9 +30,9 @@ public class Concierto extends Servicio {
 	
 	
 	
-	public Concierto(long id, String nombre, String descripcion, double pvp, boolean stock, LocalDate fechaPubl,
+	public Concierto(long id, String nombre, String descripcion, String image, double pvp, boolean stock, LocalDate fechaPubl,
 			 String artista, LocalDate fechaConc, String lugarConc, LineaPedido lineaPedido) {
-		super(id, nombre, descripcion, pvp, stock, fechaPubl);
+		super(id, nombre, descripcion, image, pvp, stock, fechaPubl);
 
 		this.artista = artista;
 		this.fechaConc = fechaConc;

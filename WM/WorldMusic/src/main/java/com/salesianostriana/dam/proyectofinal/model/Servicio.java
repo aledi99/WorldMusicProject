@@ -24,7 +24,7 @@ public class Servicio {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	private String nombre, descripcion;
+	private String nombre, descripcion, image;
 	private double pvp; // Precio del producto
 	private boolean stock; // El valor será "true" si está disponible-en stock; y "false" si no queda
 							// ninguna unidad del producto
