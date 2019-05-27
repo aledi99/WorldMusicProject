@@ -23,15 +23,12 @@
 
 				<div class="container">
 					<form class="form-horizontal" method="POST" action="#"
-						th:action="${concierto.idConcierto != 0 and concierto.idProducto != 0} ? @{/editarConcierto/submit} : @{/newConcierto/submit}" th:object="${concierto}"
+						th:action="${concierto.id != 0 } ? @{/editarConcierto/submit} : @{/newConcierto/submit}" th:object="${concierto}"
 						role="form">
 						
 						<h2 class="titulo">New Concierto</h2>
 						
-						<input th:if="*{idProducto != 0}" type="hidden" name="idProducto" th:field="*{idProducto}" />
-						
-						
-						<input th:if="*{idConcierto != 0}" type="hidden" name="idConcierto" th:field="*{idConcierto}" />
+						<input th:if="*{id != 0}" type="hidden" name="id" th:field="*{id}" />
 						
 						<div class="form-group">
 							<label class="col-md-9 control-label" for="nombre">Nombre</label>
@@ -43,16 +40,6 @@
 							</div>
 						</div>
 
-						<!-- Text input-->
-						<div class="form-group">
-							<label class="col-md-9 control-label" for="categoria">Categoría</label>
-							<div class="col-md-9">
-								<input id="categoria" name="categoria" type="text"
-									th:field="*{categoria}" placeholder="La categoría del producto"
-									class="form-control input-md" required=""> <span
-									class="help-block">(Separados por espacios)</span>
-							</div>
-						</div>
 
 						<!-- Text input-->
 						<div class="form-group">

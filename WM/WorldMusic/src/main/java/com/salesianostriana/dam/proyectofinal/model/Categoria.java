@@ -1,5 +1,10 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
+/**Clase Model de las Categorías de los Productos.
+ * @author alediaz
+ */
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,5 +31,5 @@ public class Categoria {
 	private String nombreC; // El nombre de la categoría
 	
 	@OneToMany
-	private List<Producto> producto = new ArrayList<>();
+	private List<Producto> producto = new ArrayList<>(); //Asociación OneToMany con la clase Producto.
 }

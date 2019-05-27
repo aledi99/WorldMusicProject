@@ -28,6 +28,11 @@ public class UsuarioController {
 		return "Inicio";
 	}
 	
+	@GetMapping({"/acerca"})
+	public String acercaDe(Model model) {
+		return "World Music";
+	}
+	
 	@GetMapping("/login") 
 	public String mostrarLogin(Model model) {
 		return "Login";

@@ -51,10 +51,10 @@ public class CarritoController {
     	return "redirect:/carrito";
     }
     
-    @GetMapping ("/conciertoACarrito/{idConcierto}")
-    public String conciertoACarrito (@PathVariable("idConcierto") Long idConcierto, Model model) {
+    @GetMapping ("/conciertoACarrito/{id}")
+    public String conciertoACarrito (@PathVariable("id") Long id, Model model) {
     	
-    	servicioCarrito.addConcierto(servicioConcierto.findById(idConcierto));
+    	servicioCarrito.addConcierto(servicioConcierto.findById(id));
     	    		 	
     	return "redirect:/carrito";
     }

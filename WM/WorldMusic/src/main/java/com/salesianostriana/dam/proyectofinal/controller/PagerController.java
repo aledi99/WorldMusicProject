@@ -54,6 +54,10 @@ public class PagerController {
         } else {
         	products = productService.findByNombreContainingIgnoreCasePageable(evalNombre, PageRequest.of(evalPage, evalPageSize));
         }
+        
+      
+        
+        
 
         // Obtenemos la página definida por evalPage y evalPageSize de objetos de nuestro modelo
         //Page<Producto> products = productService.findAllPageable(PageRequest.of(evalPage, evalPageSize));

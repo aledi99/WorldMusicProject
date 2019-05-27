@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Footer</title>
+</head>
+<body>
+
+	<!-- Solo un footer  -->
+  
+        <footer th:fragment="footer">
+      <div class="mastfoot col-md-14">
+            <a href="#" th:href="@{/acerca}"><p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Acerca de</button></p></a>
+        <div class="inner">
+          <p>&copy; 2019. World Music. <a href="https://templateflip.com/" target="_blank">España</a>.</p>
+        </div>
+      </div>
+      
+      </footer>
+
+  
+</body>
+</html>

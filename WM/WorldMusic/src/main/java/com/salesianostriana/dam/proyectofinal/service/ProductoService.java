@@ -23,4 +23,9 @@ public class ProductoService extends BaseService<Producto, Long, ProductoReposit
 		return repositorio.findByNombreContainingIgnoreCase(nombre, pageable);
 	}
 	
+	public  Page<Producto> findByNombreCategoriaContainingIgnoreCasePageable(String nombreCategoria, Pageable pageable)
+	{
+		return repositorio.findByNombreCategoriaContainingIgnoreCase(nombreCategoria, pageable);
+	}
+	
 }

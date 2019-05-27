@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.proyectofinal.model.Producto;
 import com.salesianostriana.dam.proyectofinal.repository.ProductoRepository;
+import com.salesianostriana.dam.proyectofinal.service.CategoriaService;
 import com.salesianostriana.dam.proyectofinal.service.ProductoService;
 
 @Controller
@@ -18,6 +19,9 @@ public class ProductoController {
 	
 	@Autowired
 	private ProductoService servicioProducto;
+	
+	@Autowired
+	private CategoriaService servicioCategoria;
 	
 	@Autowired
 	private ProductoRepository repositorioProducto;
@@ -30,6 +34,7 @@ public class ProductoController {
 	@GetMapping("/newProducto")
 	public String anyadirProducto(Model model) {
 		model.addAttribute("producto", new Producto());
+		model.addAttribute("listaCategoria", servicioCategoria.findAll());
 		
 		return "RegisterProducto";
 	}
@@ -37,7 +42,7 @@ public class ProductoController {
 	@PostMapping("/newProducto/submit")
 	public String procesarFormulario(@ModelAttribute("producto") Producto a) {
 		servicioProducto.save(a);
-		return "redirect:/";
+		return "redirect:/listProducto";
 	}
 
 	

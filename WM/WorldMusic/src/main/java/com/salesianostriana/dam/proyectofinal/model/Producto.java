@@ -25,14 +25,14 @@ import lombok.ToString;
 public class Producto extends Servicio {
 
 	
-	
+	private String nombreCategoria;
 	
 	
 	
 	public Producto(long id, String nombre, String descripcion, String image, double pvp, boolean stock, LocalDate fechaPubl,
-		 Categoria categoria, LineaPedido lineaPedido) {
+		String nombreCategoria, Categoria categoria, LineaPedido lineaPedido) {
 		super(id, nombre, descripcion, image, pvp, stock, fechaPubl );
-
+		this.nombreCategoria = nombreCategoria;
 		this.categoria = categoria;
 		this.lineaPedido = lineaPedido;
 	}

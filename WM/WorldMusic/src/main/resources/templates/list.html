@@ -36,7 +36,7 @@
 		
 		<!--    <form action="#" th:action="@{search}" th:object="${searchForm}" method="POST"> -->
 		 <form action="#" th:action="@{/productosbuscados}" method="GET">
-		<input type="text" name="nombre" placeholder="Buscar Por Nombre" style="margin-left: 5%; padding: 4px;" />
+		<input type="text" class="buscador" name="nombre" placeholder="Buscar Por Nombre" style="margin-left: 5%; padding: 4px;" />
 		<button class="btn- btn-danger" type="submit"  style="padding: 4px;">
 			<span class="glyphicon glyphicon-search"></span>
 		</button>
@@ -58,6 +58,7 @@
 						alt="..."
 						class="img-responsive" height="150px" />
 					<h4><span th:text="${producto.nombre}">Nombre del producto</span></h4>
+					<h4><span th:text="${producto.nombreCategoria}">Categoria</span></h4>
 					<div class="ratings">
 						<span class="glyphicon glyphicon-star"></span> <span
 							class="glyphicon glyphicon-star"></span> <span

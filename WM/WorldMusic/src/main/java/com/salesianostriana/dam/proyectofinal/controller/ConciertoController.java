@@ -41,7 +41,7 @@ public class ConciertoController {
 	@PostMapping("/newConcierto/submit")
 	public String procesarFormulario(@ModelAttribute("concierto") Concierto a) {
 		servicioConcierto.save(a);
-		return "redirect:/";
+		return "redirect:/listConcierto";
 	}
 
 	
@@ -51,10 +51,10 @@ public class ConciertoController {
 		return "ListaConciertos";
 	}
 	
-	@GetMapping("/editarConcierto/{idConcierto}")
-	public String mostrarFormularioEdicion(@PathVariable("idConcierto") long idConcierto, Model model) {
+	@GetMapping("/editarConcierto/{id}")
+	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 		
-		Concierto editConcierto = servicioConcierto.findById(idConcierto);
+		Concierto editConcierto = servicioConcierto.findById(id);
 		if (editConcierto != null) {
 			model.addAttribute("concierto", editConcierto);
 			return "RegisterConcierto";
@@ -72,9 +72,9 @@ public class ConciertoController {
 		return "redirect:/listConcierto";
 	}
 	
-	@GetMapping("/borrarConcierto/{idProducto}")
-	public String borrar(@PathVariable("idProducto") long idProducto) {
-		servicioConcierto.deleteById(idProducto);
+	@GetMapping("/borrarConcierto/{id}")
+	public String borrar(@PathVariable("id") long id) {
+		servicioConcierto.deleteById(id);
 		return "redirect:/listConcierto";
 	}
 	

@@ -20,7 +20,10 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 	 */
 	public  List<Producto> findByNombreContainingIgnoreCase(String nombre);
 	
+	public  List<Producto> findByNombreCategoriaContainingIgnoreCase(String nombreCategoria);
+	
 
 	public  Page<Producto> findByNombreContainingIgnoreCase(String nombre, Pageable pageable);
+	public  Page<Producto> findByNombreCategoriaContainingIgnoreCase(String nombreCategoria, Pageable pageable);
 
 }

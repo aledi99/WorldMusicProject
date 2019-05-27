@@ -1574,3 +1574,11 @@ select producto0_.id as id1_6_, producto0_.descripcion as descripc2_6_, producto
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CASA" no encontrada
 Table "CASA" not found; SQL statement:
 DELETE CASA [42102-199]
+2019-05-27 08:29:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2) [22018-199]
+2019-05-27 08:29:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"
+Data conversion error converting "'' (CATEGORIA: ""ID_CATEGORIA"" BIGINT NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CATEGORIA"("ID_CATEGORIA","NOMBREC")VALUES(?,?) -- (?1, ?2) [22018-199]

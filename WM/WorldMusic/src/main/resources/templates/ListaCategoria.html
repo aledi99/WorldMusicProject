@@ -24,37 +24,29 @@
             <div th:insert="navegador :: navegador"></div>
             
             <div class = "presentacion">
-						<h1>LISTA PRODUCTOS</h1>
+						<h1>LISTA CATEGORÍA</h1>
 						</div>
 				<div class="cover-container">
+            
             <div class="cover-container">
 
-                <a href="#" th:href="@{/newProducto}">Añadir nuevo Producto</a> <br>
+                <a href="#" th:href="@{/newCategoria}">Añadir nueva Categoria</a> <br>
 
                 <table border=1>
                     <thead>
                         <tr>
                         	<th>Id</th>
                             <th>Nombre</th>
-                            <th>Categoría</th>
-                            <th>Descripción</th>
-                            <th>Fecha de Publicación</th>
-                            <th>PvP</th>
-                            <th>En Stock</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="producto : ${listaProducto}">
-                        	<td th:text="${producto.id}">1</td>
-                            <td th:text="${producto.nombre}">Nombre</td>
-                            <td th:text="${producto.nombreCategoria}">Categoría</td>
-                            <td th:text="${producto.descripcion}">Descripción</td>
-                            <td th:text="${producto.fechaPubl}">Fecha Publicación</td>
-                            <td th:text="${producto.pvp}">PvP</td>
-                            <td th:text="${producto.stock}">Stock</td>
+                        <tr th:each="categoria : ${listaCategoria}">
+                        	<td th:text="${categoria.idCategoria}">1</td>
+                            <td th:text="${categoria.nombreC}">Nombre</td>
                             <td>
-                                <a href="#" th:href="@{/editarProducto/{id}(id=${producto.id})}">Editar</a>
-                                <a href="#" th:href="@{/borrarProducto/{id}(id=${producto.id})}">Borrar</a>
+                                <a href="#" th:href="@{/editarCategoria/{idCategoria}(idCategoria=${categoria.idCategoria})}">Editar</a>
+                                <a href="#" th:href="@{/borrarCategoria/{idCategoria}(idCategoria=${categoria.idCategoria})}">Borrar</a>
                             </td>
                         </tr>
                     </tbody>
@@ -64,8 +56,8 @@
             </div>
 
 
-
-            <footer th:insert="footer :: footer"></footer>
+<footer th:insert="footer :: footer"></footer>
+            
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

@@ -27,9 +27,12 @@
 			<div class="cover-container">
 				<div th:insert="navegador :: navegador"></div>
 				<br>
-
-
+					<div class = "presentacion">
+						<h1>CONCIERTOS</h1>
+						</div>
 				<div class="cover-container">
+				
+				
 
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
 						<!-- Indicators -->
@@ -130,7 +133,7 @@
 						<!-- En el botón comprar de cada producto, cogemos el id de dicho producto
 						como ya hemos hecho en ejemplos anteriores, mediante el id -->	
 											
-							<a href="/conciertoACarrito/" th:href="@{/conciertoACarrito/{idConcierto}(idConcierto=${concierto.idConcierto})}">
+							<a href="/conciertoACarrito/" th:href="@{/conciertoACarrito/{id}(id=${concierto.id})}">
 								<button type="button" class="btn btn-primary">
   									<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp; Comprar
 								</button>

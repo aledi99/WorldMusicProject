@@ -1,5 +1,8 @@
 package com.salesianostriana.dam.proyectofinal.model;
 
+/** Clase Model de los Conciertos que contendrá la página
+ * @author alediaz
+ */
 import java.time.LocalDate;
 
 import javax.persistence.DiscriminatorValue;

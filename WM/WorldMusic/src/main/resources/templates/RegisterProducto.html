@@ -46,9 +46,8 @@
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="selectbasic">Categoría</label>
 							<div class="col-md-4">
-								<select th:field="*{categoria}" id="selectbasic" name="selectbasic" class="form-control">
-									<option th:value="'1">Option one</option>
-									<option th:value="2">Option two</option>
+								<select th:field="*{nombreCategoria}" id="selectbasic" name="selectbasic" class="form-control">
+									<option th:each="categoria : ${listaCategoria}" th:value="${categoria.nombreC}" th:text="${categoria.nombreC}">Option one</option>
 								</select>
 							</div>
 						</div>
